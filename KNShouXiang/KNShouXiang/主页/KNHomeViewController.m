@@ -12,8 +12,11 @@
 #import "UIView+JKFrame.h"
 #import <StoreKit/StoreKit.h>
 #import "KNSettingViewController.h"
+#import "KNShouXiangButton.h"
 #import "Reachability.h"
 #import "KNToast.h"
+
+#define BUTTON_HEIGH 100
 
 @interface KNHomeViewController ()
 
@@ -28,9 +31,30 @@
     
     [self addRightbarButton];
     
+    [self addAllSubview];
+    
     [self checkAndShowAppReviewDialog];
     
     [self checkAppConfig];
+}
+
+- (void)addAllSubview {
+    
+    NSArray *titleArray = @[@"如何看手相", @"基本手相", @"八大掌丘", @"手掌八宫", @"六大线纹"];
+    CGFloat width = self.view.bounds.size.width - 60;
+    CGFloat y = 30;
+    for (NSInteger index = 0; index < 5 ; index ++) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        button.frame  = CGRectMake(30, y, width, BUTTON_HEIGH);
+        [button setTitle:titleArray[index] forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont boldSystemFontOfSize:30];
+        button.backgroundColor = BUTTON_SELECT_COLOR;
+        button.titleLabel.textColor = [UIColor blackColor];
+        button.layer.cornerRadius = 8;
+        button.layer.masksToBounds = YES;
+        [self.view addSubview:button];
+        y += (BUTTON_HEIGH + 20);
+    }
 }
 
 - (void)addRightbarButton {

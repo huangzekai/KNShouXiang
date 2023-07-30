@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C290F341612744F5CC73738 /* Pods_KNShouXiang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B571E1BB7AE0252415B899 /* Pods_KNShouXiang.framework */; };
+		756BDF002A76AEC200359D5C /* KNShouXiangButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 756BDEFF2A76AEC200359D5C /* KNShouXiangButton.m */; };
 		757B59D32A75F77700269DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B59D22A75F77700269DCD /* AppDelegate.swift */; };
 		757B59D72A75F77700269DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B59D62A75F77700269DCD /* ViewController.swift */; };
 		757B59DA2A75F77700269DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757B59D82A75F77700269DCD /* Main.storyboard */; };
@@ -76,6 +77,8 @@
 /* Begin PBXFileReference section */
 		12B571E1BB7AE0252415B899 /* Pods_KNShouXiang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNShouXiang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA37B5D510AD68C0983621A /* Pods-KNShouXiang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNShouXiang.release.xcconfig"; path = "Target Support Files/Pods-KNShouXiang/Pods-KNShouXiang.release.xcconfig"; sourceTree = "<group>"; };
+		756BDEFE2A76AEC200359D5C /* KNShouXiangButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNShouXiangButton.h; sourceTree = "<group>"; };
+		756BDEFF2A76AEC200359D5C /* KNShouXiangButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNShouXiangButton.m; sourceTree = "<group>"; };
 		757B59CF2A75F77700269DCD /* KNShouXiang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNShouXiang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757B59D22A75F77700269DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757B59D62A75F77700269DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 		75B3BD952A76707B00FC348B /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				756BDEFE2A76AEC200359D5C /* KNShouXiangButton.h */,
+				756BDEFF2A76AEC200359D5C /* KNShouXiangButton.m */,
 				75B3BD962A76707B00FC348B /* KNHomeViewController.h */,
 				75B3BD972A76707B00FC348B /* KNHomeViewController.m */,
 			);
@@ -598,6 +603,7 @@
 				75B3BDA12A76707B00FC348B /* KNMonitorManager.m in Sources */,
 				75B3BD9E2A76707B00FC348B /* JDSBNotificationAnimator.m in Sources */,
 				75B3BD9B2A76707B00FC348B /* JDSBNotificationWindow.m in Sources */,
+				756BDF002A76AEC200359D5C /* KNShouXiangButton.m in Sources */,
 				75B3BDA72A76707B00FC348B /* KNCheckUpdateManager.m in Sources */,
 				75B3BDA62A76707B00FC348B /* KNFeedBackViewController.m in Sources */,
 				75B3BDB82A76707B00FC348B /* KNGlobalColor.swift in Sources */,
