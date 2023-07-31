@@ -16,48 +16,40 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
-        self.layer.cornerRadius = 5;
+        self.layer.cornerRadius = 10;
         self.layer.borderWidth = 0.5;
         self.layer.borderColor = [UIColor lightGrayColor].CGColor;
         self.layer.masksToBounds = YES;
         
         self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+        
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.imageView.hidden = NO;
+        
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:26];
+        self.titleLabel.textColor = [UIColor blackColor];
+        self.titleLabel.hidden = NO;
     }
     return self;
 }
 
-- (void)setup {
-    CGFloat x = (self.jk_width - IMAGE_HEIGHT) / 2;
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, 8, IMAGE_HEIGHT, IMAGE_HEIGHT)];
-    _imageView.layer.cornerRadius = _imageView.frame.size.width / 2;
-    _imageView.layer.masksToBounds = YES;
-    _imageView.layer.borderWidth = 0.5;
-    _imageView.layer.borderColor = [UIColor colorWithWhite:0.0 alpha:0.3].CGColor;
-    [self addSubview:_imageView];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat space = 30;
+    CGFloat width = self.jk_height - 2 * 20;
+    self.imageView.frame = CGRectMake(space, 20, width, width);
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _imageView.jk_bottom, self.jk_width, self.jk_height - _imageView.jk_bottom)];
-    _titleLabel.textAlignment = NSTextAlignmentCenter;
-    _titleLabel.font = [UIFont boldSystemFontOfSize:13];
-    _titleLabel.textColor = GRAY_COLOR;
-    [self addSubview:_titleLabel];
-    
-//    _descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 25, 200, 20)];
-//    _descriptionLabel.numberOfLines = 2;
-//    _descriptionLabel.font = [UIFont systemFontOfSize:12];
-//    _descriptionLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1];
-//    [self.contentView addSubview:_descriptionLabel];
-    
-    [self setHighlighted:NO];
+    self.titleLabel.frame = CGRectMake(self.imageView.jk_right + 8, space, self.jk_width - width - space * 3, self.jk_height - space * 2);
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
-    
+
     if (highlighted) {
-        self.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+        self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     } else {
-        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
     }
 }
 

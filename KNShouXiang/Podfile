@@ -12,6 +12,8 @@ target 'KNShouXiang' do
   pod 'SwiftyStoreKit'
   pod 'UMCommon'
   pod 'Bugly'
+  pod 'JXSegmentedView'
+  pod 'JXPhotoBrowser', '~> 3.0'
 end
 
 post_install do |installer|

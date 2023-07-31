@@ -55,6 +55,12 @@
 		75B3BDBB2A76707B00FC348B /* KNToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B3BD912A76707B00FC348B /* KNToast.m */; };
 		75B3BDBC2A76707B00FC348B /* KNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B3BD942A76707B00FC348B /* KNBaseViewController.m */; };
 		75B3BDBD2A76707B00FC348B /* KNHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B3BD972A76707B00FC348B /* KNHomeViewController.m */; };
+		B943E7522A773E60008067C2 /* ch3.png in Resources */ = {isa = PBXBuildFile; fileRef = B943E7512A773E60008067C2 /* ch3.png */; };
+		B943E7542A774481008067C2 /* zhangqiu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B943E7532A774481008067C2 /* zhangqiu@3x.png */; };
+		B943E7562A774650008067C2 /* bagong@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B943E7552A774650008067C2 /* bagong@3x.png */; };
+		B943E7582A7749DD008067C2 /* KNAboutShouXiangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */; };
+		B943E75A2A77572A008067C2 /* ListBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943E7592A77572A008067C2 /* ListBaseViewController.swift */; };
+		B9AAD0B42A77A836003AC75A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9AAD0B62A77A836003AC75A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +161,17 @@
 		75B3BD962A76707B00FC348B /* KNHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNHomeViewController.h; sourceTree = "<group>"; };
 		75B3BD972A76707B00FC348B /* KNHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNHomeViewController.m; sourceTree = "<group>"; };
 		75B3BDC32A76729300FC348B /* KNShouXiang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KNShouXiang-Bridging-Header.h"; sourceTree = "<group>"; };
+		B943E7512A773E60008067C2 /* ch3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ch3.png; path = "手相图解/Payload/手相图解.app/ch3.png"; sourceTree = SOURCE_ROOT; };
+		B943E7532A774481008067C2 /* zhangqiu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhangqiu@3x.png"; sourceTree = "<group>"; };
+		B943E7552A774650008067C2 /* bagong@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bagong@3x.png"; sourceTree = "<group>"; };
+		B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNAboutShouXiangViewController.swift; sourceTree = "<group>"; };
+		B943E7592A77572A008067C2 /* ListBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBaseViewController.swift; sourceTree = "<group>"; };
+		B9AAD0AE2A77A7AB003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B9AAD0AF2A77A7AB003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B9AAD0B02A77A7B4003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		B9AAD0B12A77A7B4003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B9AAD0B52A77A836003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B9AAD0B72A77A838003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D5563E522814AF9137BF5546 /* Pods-KNShouXiang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNShouXiang.debug.xcconfig"; path = "Target Support Files/Pods-KNShouXiang/Pods-KNShouXiang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +239,7 @@
 				757B59DB2A75F77800269DCD /* Assets.xcassets */,
 				757B59DD2A75F77800269DCD /* LaunchScreen.storyboard */,
 				757B59E02A75F77800269DCD /* Info.plist */,
+				B9AAD0B62A77A836003AC75A /* Localizable.strings */,
 			);
 			path = KNShouXiang;
 			sourceTree = "<group>";
@@ -326,11 +344,13 @@
 			children = (
 				75B3BD782A76707B00FC348B /* not_vip@3x.png */,
 				75B3BD792A76707B00FC348B /* refresh@3x.png */,
+				B943E7532A774481008067C2 /* zhangqiu@3x.png */,
 				75B3BD7A2A76707B00FC348B /* share_normal@3x.png */,
 				75B3BD7B2A76707B00FC348B /* privacy@3x.png */,
 				75B3BD7C2A76707B00FC348B /* text_copy@3x.png */,
 				75B3BD7D2A76707B00FC348B /* copy@3x.png */,
 				75B3BD7E2A76707B00FC348B /* vip@3x.png */,
+				B943E7512A773E60008067C2 /* ch3.png */,
 				75B3BD7F2A76707B00FC348B /* setting_normal@3x.png */,
 				75B3BD802A76707B00FC348B /* all_selected@3x.png */,
 				75B3BD812A76707B00FC348B /* more@3x.png */,
@@ -339,6 +359,7 @@
 				75B3BD842A76707B00FC348B /* update_normal@3x.png */,
 				75B3BD852A76707B00FC348B /* setting_select@3x.png */,
 				75B3BD862A76707B00FC348B /* back_icon@3x.png */,
+				B943E7552A774650008067C2 /* bagong@3x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -370,6 +391,8 @@
 				756BDEFF2A76AEC200359D5C /* KNShouXiangButton.m */,
 				75B3BD962A76707B00FC348B /* KNHomeViewController.h */,
 				75B3BD972A76707B00FC348B /* KNHomeViewController.m */,
+				B943E7592A77572A008067C2 /* ListBaseViewController.swift */,
+				B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -479,6 +502,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 757B59C62A75F77700269DCD;
 			productRefGroup = 757B59D02A75F77700269DCD /* Products */;
@@ -501,12 +526,16 @@
 				757B59DC2A75F77800269DCD /* Assets.xcassets in Resources */,
 				75B3BDB32A76707B00FC348B /* all_normal@3x.png in Resources */,
 				75B3BDAA2A76707B00FC348B /* share_normal@3x.png in Resources */,
+				B943E7542A774481008067C2 /* zhangqiu@3x.png in Resources */,
+				B943E7562A774650008067C2 /* bagong@3x.png in Resources */,
 				757B59DA2A75F77700269DCD /* Main.storyboard in Resources */,
+				B943E7522A773E60008067C2 /* ch3.png in Resources */,
 				75B3BDB62A76707B00FC348B /* back_icon@3x.png in Resources */,
 				75B3BDA92A76707B00FC348B /* refresh@3x.png in Resources */,
 				75B3BDB12A76707B00FC348B /* more@3x.png in Resources */,
 				75B3BDB22A76707B00FC348B /* feedback@3x.png in Resources */,
 				75B3BDB52A76707B00FC348B /* setting_select@3x.png in Resources */,
+				B9AAD0B42A77A836003AC75A /* Localizable.strings in Resources */,
 				75B3BDAC2A76707B00FC348B /* text_copy@3x.png in Resources */,
 				75B3BDA82A76707B00FC348B /* not_vip@3x.png in Resources */,
 				75B3BDAE2A76707B00FC348B /* vip@3x.png in Resources */,
@@ -586,6 +615,7 @@
 				757B59D32A75F77700269DCD /* AppDelegate.swift in Sources */,
 				75B3BDA22A76707B00FC348B /* KNAppConfigManager.m in Sources */,
 				75B3BDBC2A76707B00FC348B /* KNBaseViewController.m in Sources */,
+				B943E75A2A77572A008067C2 /* ListBaseViewController.swift in Sources */,
 				75B3BDA42A76707B00FC348B /* KNPrivacyViewController.m in Sources */,
 				75B3BDA02A76707B00FC348B /* JDSystemStatusBarHelpers.m in Sources */,
 				75B3BD982A76707B00FC348B /* JDStatusBarNotificationStyle.m in Sources */,
@@ -605,6 +635,7 @@
 				75B3BD9B2A76707B00FC348B /* JDSBNotificationWindow.m in Sources */,
 				756BDF002A76AEC200359D5C /* KNShouXiangButton.m in Sources */,
 				75B3BDA72A76707B00FC348B /* KNCheckUpdateManager.m in Sources */,
+				B943E7582A7749DD008067C2 /* KNAboutShouXiangViewController.swift in Sources */,
 				75B3BDA62A76707B00FC348B /* KNFeedBackViewController.m in Sources */,
 				75B3BDB82A76707B00FC348B /* KNGlobalColor.swift in Sources */,
 			);
@@ -647,6 +678,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				757B59D92A75F77700269DCD /* Base */,
+				B9AAD0AE2A77A7AB003AC75A /* zh-Hans */,
+				B9AAD0B02A77A7B4003AC75A /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -655,8 +688,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				757B59DE2A75F77800269DCD /* Base */,
+				B9AAD0AF2A77A7AB003AC75A /* zh-Hans */,
+				B9AAD0B12A77A7B4003AC75A /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B9AAD0B62A77A836003AC75A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9AAD0B52A77A836003AC75A /* zh-Hans */,
+				B9AAD0B72A77A838003AC75A /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -666,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -726,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

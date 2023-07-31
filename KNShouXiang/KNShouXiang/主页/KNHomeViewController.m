@@ -12,6 +12,7 @@
 #import "UIView+JKFrame.h"
 #import <StoreKit/StoreKit.h>
 #import "KNSettingViewController.h"
+#import "KNShouXiang-Swift.h"
 #import "KNShouXiangButton.h"
 #import "Reachability.h"
 #import "KNToast.h"
@@ -41,20 +42,38 @@
 - (void)addAllSubview {
     
     NSArray *titleArray = @[@"如何看手相", @"基本手相", @"八大掌丘", @"手掌八宫", @"六大线纹"];
+    NSArray *imageArray = @[@"bagong", @"bagong",@"zhangqiu", @"bagong", @"bagong"];
     CGFloat width = self.view.bounds.size.width - 60;
     CGFloat y = 30;
+    CGFloat height = (self.view.jk_height - 30 - 60 - 20 * 4) / 5;
+    
     for (NSInteger index = 0; index < 5 ; index ++) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        button.frame  = CGRectMake(30, y, width, BUTTON_HEIGH);
+        KNShouXiangButton *button = [[KNShouXiangButton alloc] initWithFrame:CGRectMake(30, y, width, height)];
+        [button setImage:[UIImage imageNamed:imageArray[index]] forState:UIControlStateNormal];
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont boldSystemFontOfSize:30];
-        button.backgroundColor = BUTTON_SELECT_COLOR;
-        button.titleLabel.textColor = [UIColor blackColor];
-        button.layer.cornerRadius = 8;
-        button.layer.masksToBounds = YES;
+        [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 100 + index;
         [self.view addSubview:button];
-        y += (BUTTON_HEIGH + 20);
+        y += (height + 20);
     }
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    CGFloat y = 30;
+    CGFloat width = self.view.bounds.size.width - 60;
+    CGFloat height = (self.view.jk_height - 30 - 60 - 20 * 4) / 5;
+    for (NSInteger index = 0; index < 5 ; index ++) {
+        UIButton *button = [self.view viewWithTag:100 + index];
+        button.frame = CGRectMake(30, y, width, height);
+        y += (height + 20);
+    }
+}
+
+- (void)buttonAction:(UIButton *)sender {
+    KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
+    [self.navigationController pushViewController:ctr animated:YES];
 }
 
 - (void)addRightbarButton {
@@ -68,11 +87,6 @@
     KNSettingViewController *ctr = [[KNSettingViewController alloc] init];
     [self.navigationController pushViewController:ctr animated:YES];
 }
-
-- (void)dealloc {
-}
-
-
 
 - (void)checkAppConfig {
     __weak __typeof(self) weakSelf = self;

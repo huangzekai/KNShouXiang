@@ -9,10 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KNShouXiangButton : UICollectionViewCell
-@property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) UILabel *descriptionLabel;
+@interface KNShouXiangButton : UIButton
 @end
 
 NS_ASSUME_NONNULL_END
