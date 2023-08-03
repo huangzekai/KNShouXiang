@@ -21,7 +21,7 @@ class KNAboutShouXiangViewController: KNBaseViewController  {
         self.title = "如何看手相"
         
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
-        let titles = ["猴哥", "青蛙王子", "旺财", "粉红猪", "喜羊羊", "黄焖鸡", "小马哥", "牛魔王", "大象先生", "神龙"]
+        let titles = ["关于手相","左手或右手", "准备工作", "三大纹路"]
         let dataSource = JXSegmentedTitleDataSource()
         dataSource.isTitleColorGradientEnabled = true
         dataSource.titles = titles
@@ -85,6 +85,8 @@ extension KNAboutShouXiangViewController: JXSegmentedListContainerViewDataSource
     }
 
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        return ListBaseViewController()
+        let controller = ListBaseViewController()
+        controller.index = index
+        return controller
     }
 }
