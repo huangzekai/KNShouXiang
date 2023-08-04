@@ -1,28 +1,38 @@
 //
-//  KNAboutShouXiang.swift
+//  KNZhangQiuViewController.swift
 //  KNShouXiang
 //
-//  Created by kenny on 2023/7/31.
+//  Created by kenny on 2023/8/4.
 //
 
-import Foundation
+import UIKit
 import JXSegmentedView
 
-class KNAboutShouXiangViewController: KNBaseViewController  {
+
+class KNZhangQiuViewController: KNBaseViewController {
+    lazy var imageView:UIImageView! = {
+        let zhangqiuImageView = UIImageView(image: UIImage(named: "zhangqiu"))
+        zhangqiuImageView.contentMode = .scaleAspectFit
+        return zhangqiuImageView
+    }()
+    
     var segmentedDataSource: JXSegmentedBaseDataSource?
     let segmentedView = JXSegmentedView()
     lazy var listContainerView: JXSegmentedListContainerView! = {
         return JXSegmentedListContainerView(dataSource: self)
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
-        self.title = "如何看手相"
+        
+        self.title = "八大掌丘"
+        
+        view.addSubview(imageView)
+        imageView.frame = CGRect(x: 100, y: 15, width: 150, height: 150)
+        
         
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
-        let titles = ["关于手相","左手或右手", "准备工作", "三大纹路"]
+        let titles = ["金星丘","木星丘", "土星丘", "太阳丘", "水星丘", "太阴丘", "第一火星丘", "第二火星丘"]
         let dataSource = JXSegmentedTitleDataSource()
         dataSource.isTitleColorGradientEnabled = true
         dataSource.titles = titles
@@ -41,7 +51,6 @@ class KNAboutShouXiangViewController: KNBaseViewController  {
         segmentedView.listContainer = listContainerView
         view.addSubview(listContainerView)
     }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -59,13 +68,14 @@ class KNAboutShouXiangViewController: KNBaseViewController  {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        segmentedView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 50)
-        listContainerView.frame = CGRect(x: 0, y: 50, width: view.bounds.size.width, height: view.bounds.size.height - 50)
+        segmentedView.frame = CGRect(x: 0, y: 165, width: view.bounds.size.width, height: 50)
+        listContainerView.frame = CGRect(x: 0, y: CGRectGetMaxY(segmentedView.frame), width: view.bounds.size.width, height: view.bounds.size.height - CGRectGetMaxY(segmentedView.frame))
     }
-
+    
 }
 
-extension KNAboutShouXiangViewController: JXSegmentedViewDelegate {
+
+extension KNZhangQiuViewController: JXSegmentedViewDelegate {
     func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
         if let dotDataSource = segmentedDataSource as? JXSegmentedDotDataSource {
             //先更新数据源的数据
@@ -78,7 +88,7 @@ extension KNAboutShouXiangViewController: JXSegmentedViewDelegate {
     }
 }
 
-extension KNAboutShouXiangViewController: JXSegmentedListContainerViewDataSource {
+extension KNZhangQiuViewController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
         if let titleDataSource = segmentedView.dataSource as? JXSegmentedBaseDataSource {
             return titleDataSource.dataSource.count
@@ -90,7 +100,11 @@ extension KNAboutShouXiangViewController: JXSegmentedListContainerViewDataSource
         let contentArray = [NSLocalizedString("关于手相", comment: ""),
                             NSLocalizedString("左右手内容", comment: ""),
                             NSLocalizedString("准备工作内容", comment: ""),
-                            NSLocalizedString("三大纹路内容", comment: "")]
+                            NSLocalizedString("三大纹路内容", comment: ""),
+                            NSLocalizedString("关于手相", comment: ""),
+                            NSLocalizedString("左右手内容", comment: ""),
+                            NSLocalizedString("准备工作内容", comment: ""),
+                            NSLocalizedString("准备工作内容", comment: "")]
         let controller = KNBaseContentViewController()
         controller.content = contentArray[index]
         return controller

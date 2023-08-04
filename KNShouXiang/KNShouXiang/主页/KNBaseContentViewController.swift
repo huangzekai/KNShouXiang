@@ -9,10 +9,10 @@
 import UIKit
 import JXSegmentedView
 
-class ListBaseViewController: KNBaseViewController {
+class KNBaseContentViewController: KNBaseViewController {
 
     let textView = UITextView()
-    var index = 0
+    var content:String = ""
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -25,6 +25,7 @@ class ListBaseViewController: KNBaseViewController {
         
         textView.font = UIFont.systemFont(ofSize: 18)
         textView.textColor = .black
+        textView.isEditable = false
         textView.backgroundColor = .clear
         textView.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
 
@@ -33,23 +34,17 @@ class ListBaseViewController: KNBaseViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 8 // 设置行距
         
-        let contentArray = [NSLocalizedString("关于手相", comment: ""),
-                            NSLocalizedString("左右手内容", comment: ""),
-                            NSLocalizedString("准备工作内容", comment: ""),
-                            NSLocalizedString("三大纹路内容", comment: "")]
-
-        let content = contentArray[index]
         let attributedString = NSMutableAttributedString(string: content)
         attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: content.count))
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 18), range: NSRange(location: 0, length: content.count))
         attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: 0, length: content.count))
-
+        
         textView.attributedText = attributedString
         
     }
 }
 
-extension ListBaseViewController: JXSegmentedListContainerViewListDelegate {
+extension KNBaseContentViewController: JXSegmentedListContainerViewListDelegate {
     func listView() -> UIView {
         return view
     }

@@ -59,8 +59,9 @@
 		B943E7542A774481008067C2 /* zhangqiu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B943E7532A774481008067C2 /* zhangqiu@3x.png */; };
 		B943E7562A774650008067C2 /* bagong@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B943E7552A774650008067C2 /* bagong@3x.png */; };
 		B943E7582A7749DD008067C2 /* KNAboutShouXiangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */; };
-		B943E75A2A77572A008067C2 /* ListBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943E7592A77572A008067C2 /* ListBaseViewController.swift */; };
+		B943E75A2A77572A008067C2 /* KNBaseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943E7592A77572A008067C2 /* KNBaseContentViewController.swift */; };
 		B9AAD0B42A77A836003AC75A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9AAD0B62A77A836003AC75A /* Localizable.strings */; };
+		B9AAD0BD2A7CF36E003AC75A /* KNZhangQiuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AAD0BC2A7CF36E003AC75A /* KNZhangQiuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,13 +166,14 @@
 		B943E7532A774481008067C2 /* zhangqiu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhangqiu@3x.png"; sourceTree = "<group>"; };
 		B943E7552A774650008067C2 /* bagong@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bagong@3x.png"; sourceTree = "<group>"; };
 		B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNAboutShouXiangViewController.swift; sourceTree = "<group>"; };
-		B943E7592A77572A008067C2 /* ListBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBaseViewController.swift; sourceTree = "<group>"; };
+		B943E7592A77572A008067C2 /* KNBaseContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNBaseContentViewController.swift; sourceTree = "<group>"; };
 		B9AAD0AE2A77A7AB003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B9AAD0AF2A77A7AB003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B9AAD0B02A77A7B4003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		B9AAD0B12A77A7B4003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B9AAD0B52A77A836003AC75A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B9AAD0B72A77A838003AC75A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B9AAD0BC2A7CF36E003AC75A /* KNZhangQiuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNZhangQiuViewController.swift; sourceTree = "<group>"; };
 		D5563E522814AF9137BF5546 /* Pods-KNShouXiang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNShouXiang.debug.xcconfig"; path = "Target Support Files/Pods-KNShouXiang/Pods-KNShouXiang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -391,8 +393,9 @@
 				756BDEFF2A76AEC200359D5C /* KNShouXiangButton.m */,
 				75B3BD962A76707B00FC348B /* KNHomeViewController.h */,
 				75B3BD972A76707B00FC348B /* KNHomeViewController.m */,
-				B943E7592A77572A008067C2 /* ListBaseViewController.swift */,
+				B943E7592A77572A008067C2 /* KNBaseContentViewController.swift */,
 				B943E7572A7749DD008067C2 /* KNAboutShouXiangViewController.swift */,
+				B9AAD0BC2A7CF36E003AC75A /* KNZhangQiuViewController.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -614,8 +617,9 @@
 				75B3BDB92A76707B00FC348B /* KNNavigationController.m in Sources */,
 				757B59D32A75F77700269DCD /* AppDelegate.swift in Sources */,
 				75B3BDA22A76707B00FC348B /* KNAppConfigManager.m in Sources */,
+				B9AAD0BD2A7CF36E003AC75A /* KNZhangQiuViewController.swift in Sources */,
 				75B3BDBC2A76707B00FC348B /* KNBaseViewController.m in Sources */,
-				B943E75A2A77572A008067C2 /* ListBaseViewController.swift in Sources */,
+				B943E75A2A77572A008067C2 /* KNBaseContentViewController.swift in Sources */,
 				75B3BDA42A76707B00FC348B /* KNPrivacyViewController.m in Sources */,
 				75B3BDA02A76707B00FC348B /* JDSystemStatusBarHelpers.m in Sources */,
 				75B3BD982A76707B00FC348B /* JDStatusBarNotificationStyle.m in Sources */,

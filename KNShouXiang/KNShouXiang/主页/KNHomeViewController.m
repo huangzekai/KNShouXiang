@@ -72,8 +72,22 @@
 }
 
 - (void)buttonAction:(UIButton *)sender {
-    KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
-    [self.navigationController pushViewController:ctr animated:YES];
+    
+    switch (sender.tag - 100) {
+        case 0: {
+            KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+            break;
+        }
+        case 2: {
+            KNZhangQiuViewController *ctr = [[KNZhangQiuViewController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+        }
+            
+        default:
+            break;
+    }
+
 }
 
 - (void)addRightbarButton {
