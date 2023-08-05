@@ -42,14 +42,12 @@
 - (void)addAllSubview {
     
     NSArray *titleArray = @[@"如何看手相", @"基本手相", @"八大掌丘", @"手掌八宫", @"六大线纹"];
-    NSArray *imageArray = @[@"bagong", @"bagong",@"zhangqiu", @"bagong", @"bagong"];
     CGFloat width = self.view.bounds.size.width - 60;
     CGFloat y = 30;
     CGFloat height = (self.view.jk_height - 30 - 60 - 20 * 4) / 5;
     
     for (NSInteger index = 0; index < 5 ; index ++) {
         KNShouXiangButton *button = [[KNShouXiangButton alloc] initWithFrame:CGRectMake(30, y, width, height)];
-        [button setImage:[UIImage imageNamed:imageArray[index]] forState:UIControlStateNormal];
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 100 + index;
@@ -79,15 +77,30 @@
             [self.navigationController pushViewController:ctr animated:YES];
             break;
         }
+        case 1: {
+            KNJiBenShouXiangController *ctr = [[KNJiBenShouXiangController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+            break;
+        }
         case 2: {
             KNZhangQiuViewController *ctr = [[KNZhangQiuViewController alloc] init];
             [self.navigationController pushViewController:ctr animated:YES];
+            break;
+        }
+        case 3: {
+            KNZhangGongViewController *ctr = [[KNZhangGongViewController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+            break;
+        }
+        case 4: {
+            KNXianWenViewController *ctr = [[KNXianWenViewController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+            break;
         }
             
         default:
             break;
     }
-
 }
 
 - (void)addRightbarButton {

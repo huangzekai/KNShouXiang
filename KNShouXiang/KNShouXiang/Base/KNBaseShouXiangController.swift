@@ -1,28 +1,35 @@
 //
-//  KNAboutShouXiang.swift
+//  KNBaseShouXiangController.swift
 //  KNShouXiang
 //
-//  Created by kenny on 2023/7/31.
+//  Created by kennykhuang on 2023/8/5.
 //
 
 import Foundation
 import JXSegmentedView
 
-class KNAboutShouXiangViewController: KNBaseViewController  {
+class KNBaseShouXiangController: KNBaseViewController  {
     var segmentedDataSource: JXSegmentedBaseDataSource?
     let segmentedView = JXSegmentedView()
     lazy var listContainerView: JXSegmentedListContainerView! = {
         return JXSegmentedListContainerView(dataSource: self)
     }()
+    
+    func getTitleArray()->[String] {
+        return []
+    }
+    
+    func getContentArray()->[String] {
+        return []
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        self.title = "如何看手相"
         
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
-        let titles = ["关于手相","左手或右手", "准备工作", "三大纹路"]
+        let titles = getTitleArray()
         let dataSource = JXSegmentedTitleDataSource()
         dataSource.isTitleColorGradientEnabled = true
         dataSource.titles = titles
@@ -65,7 +72,7 @@ class KNAboutShouXiangViewController: KNBaseViewController  {
 
 }
 
-extension KNAboutShouXiangViewController: JXSegmentedViewDelegate {
+extension KNBaseShouXiangController: JXSegmentedViewDelegate {
     func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
         if let dotDataSource = segmentedDataSource as? JXSegmentedDotDataSource {
             //先更新数据源的数据
@@ -78,7 +85,7 @@ extension KNAboutShouXiangViewController: JXSegmentedViewDelegate {
     }
 }
 
-extension KNAboutShouXiangViewController: JXSegmentedListContainerViewDataSource {
+extension KNBaseShouXiangController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
         if let titleDataSource = segmentedView.dataSource as? JXSegmentedBaseDataSource {
             return titleDataSource.dataSource.count
@@ -87,12 +94,14 @@ extension KNAboutShouXiangViewController: JXSegmentedListContainerViewDataSource
     }
 
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        let contentArray = [NSLocalizedString("关于手相", comment: ""),
-                            NSLocalizedString("左右手内容", comment: ""),
-                            NSLocalizedString("准备工作内容", comment: ""),
-                            NSLocalizedString("三大纹路内容", comment: "")]
-        let controller = KNBaseContentViewController()
-        controller.content = contentArray[index]
-        return controller
+
+        
+        let contentArray = getContentArray()
+        if index < contentArray.count {
+            let controller = KNBaseContentViewController()
+            controller.content = contentArray[index]
+            return controller
+        }
+        return KNBaseContentViewController()
     }
 }
