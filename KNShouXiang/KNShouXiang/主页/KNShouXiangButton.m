@@ -19,17 +19,23 @@
         self.layer.cornerRadius = 10;
         self.layer.borderWidth = 0.5;
         self.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        self.layer.masksToBounds = YES;
+//        self.layer.masksToBounds = YES;
         
-        self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"d7000f"];
+        self.backgroundColor = BUTTON_SELECT_COLOR;
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.imageView.hidden = NO;
         
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:26];
-        self.titleLabel.textColor = [UIColor blackColor];
+        self.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:26];
+        self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.hidden = NO;
+        
+        self.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.layer.shadowOffset = CGSizeMake(5, 5);
+        self.layer.shadowOpacity = 0.5;
+        self.layer.shadowRadius = 4;
     }
     return self;
 }
@@ -43,14 +49,14 @@
 //    self.titleLabel.frame = CGRectMake(self.imageView.jk_right + 8, space, self.jk_width - width - space * 3, self.jk_height - space * 2);
 //}
 
-- (void)setHighlighted:(BOOL)highlighted {
-    [super setHighlighted:highlighted];
-
-    if (highlighted) {
-        self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    } else {
-        self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
-    }
-}
+//- (void)setHighlighted:(BOOL)highlighted {
+//    [super setHighlighted:highlighted];
+//
+//    if (highlighted) {
+//        self.backgroundColor = [UIColor jk_colorWithHexString:@"DFBE96"];
+//    } else {
+//        self.backgroundColor = [UIColor jk_colorWithHexString:@"DFBE96"];
+//    }
+//}
 
 @end

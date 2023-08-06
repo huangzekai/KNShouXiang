@@ -12,6 +12,7 @@ import JXSegmentedView
 class KNXianWenViewController: KNBaseReviewController {
     
     private var currentSelectIndex = 0
+    private let countArray =  [52,58, 44, 46, 39, 31]
     
     override func getImageName()->String {
         return "xianwen"
@@ -20,40 +21,56 @@ class KNXianWenViewController: KNBaseReviewController {
         if currentSelectIndex == 0 {
             return ["六大线纹","生命线『地纹』","智慧线『人纹』", "感情线『天纹』", "命运线『天喜纹』", "婚姻线『爱情线』", "太阳线『成功线』"]
         }
-        if currentSelectIndex == 1 {
-            var array = [String]()
-            for index in 0..<52 {
-                if index == 0 {
-                    array.append("生命线")
-                } else {
-                    array.append("第\(String(index))种")
-                }
-                
+        let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
+        let count = countArray[currentSelectIndex - 1]
+        
+        var array = [String]()
+        for index in 0..<count {
+            if index == 0 {
+                array.append(titleArray[currentSelectIndex])
+            } else {
+                array.append("第\(String(index))种")
             }
-            return array
+            
         }
-        return []
+        return array
     }
     
     override func getContentArray()->[String] {
         if currentSelectIndex == 0 {
             let contentArray = [NSLocalizedString("六大线纹内容", comment: ""),
                                 NSLocalizedString("5-1-0", comment: ""),
-                                NSLocalizedString("智慧线内容", comment: ""),
-                                NSLocalizedString("感情线内容", comment: ""),
-                                NSLocalizedString("命运线内容", comment: ""),
-                                NSLocalizedString("婚姻线内容", comment: ""),
-                                NSLocalizedString("太阳线内容", comment: "")]
+                                NSLocalizedString("5-2-0", comment: ""),
+                                NSLocalizedString("5-3-0", comment: ""),
+                                NSLocalizedString("5-4-0", comment: ""),
+                                NSLocalizedString("5-5-0", comment: ""),
+                                NSLocalizedString("5-6-0", comment: "")]
             return contentArray
         }
-        if currentSelectIndex == 1 {
-            var array = [String]()
-            for index in 0..<52 {
-                array.append(NSLocalizedString("5-1-\(String(index))", comment: ""))
-            }
-            return array
+        let count = countArray[currentSelectIndex - 1]
+
+        var array = [String]()
+        for index in 0..<count {
+            array.append(NSLocalizedString("5-\(String(currentSelectIndex))-\(String(index))", comment: ""))
         }
-        return []
+        return array
+    }
+    
+    override func changeImageViewAtIndex(index: Int) {
+        if currentSelectIndex == 0 {
+            imageView.image = UIImage(named: "xianwen")
+        } else {
+            let formattedIndex = String(format: "%02d", index)
+            let imageName = "p5\(currentSelectIndex)\(formattedIndex)"
+            imageView.image = UIImage(named: imageName)
+        }
+    }
+    
+    @objc func rightBarButtonTapped() {
+        print("Right bar button tapped")
+        let ctr = KNPicturesViewController()
+        ctr.currentSelectIndex = currentSelectIndex
+        self.navigationController?.pushViewController(ctr, animated: true)
     }
     
     override func viewDidLoad() {
@@ -61,8 +78,14 @@ class KNXianWenViewController: KNBaseReviewController {
         
         self.title = "六大线纹"
         
+        let image = UIImage(named: "more_picture")?.withRenderingMode(.alwaysOriginal) // 保持图像的原始颜色
+        let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(rightBarButtonTapped))
+        navigationItem.rightBarButtonItem = rightBarButton
+        
         let width = 240.0
-        imageView.frame = CGRect(x: 20, y: 15, width: width, height: width)
+        imageView.frame = CGRect(x: 20, y: 10, width: width, height: width)
+        
+        bgView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: CGRectGetMaxY(imageView.frame) + 10)
         
         let titleArray = ["各式线纹","生命线", "智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
         var frame = CGRect(x: CGRectGetMaxX(imageView.frame) + 5.0, y: 10, width: view.bounds.size.width - CGRectGetMaxX(imageView.frame) - 20, height: 30)
@@ -107,6 +130,7 @@ class KNXianWenViewController: KNBaseReviewController {
             titleDataSource.titles = getTitleArray()
         }
         segmentedView.reloadData()
+        segmentedView.selectItemAt(index: 0)
     }
 }
 

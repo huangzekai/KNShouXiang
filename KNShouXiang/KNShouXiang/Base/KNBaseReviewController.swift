@@ -24,7 +24,6 @@ class KNBaseReviewController: KNBaseViewController {
     
     @objc func imageViewDidTap() {
         let browser = JXPhotoBrowser()
-        browser.view.backgroundColor = .white // 设置背景颜色为白色
 
         browser.numberOfItems = {
             1
@@ -69,16 +68,23 @@ class KNBaseReviewController: KNBaseViewController {
         return []
     }
     
+    lazy var bgView:UIView! = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        view.backgroundColor = .white
-        view.addSubview(imageView)
+        
         let width = 200.0
         let x = (view.bounds.size.width - width) / 2
-        imageView.frame = CGRect(x: x, y: 15, width: width, height: width)
+        imageView.frame = CGRect(x: x, y: 10, width: width, height: width)
         
-        
+        bgView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: CGRectGetMaxY(imageView.frame) + 10)
+        view.addSubview(bgView)
+        view.addSubview(imageView)
+
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
         let titles = getTitleArray()
         let dataSource = JXSegmentedTitleDataSource()
@@ -119,10 +125,12 @@ class KNBaseReviewController: KNBaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        segmentedView.frame = CGRect(x: 0, y: CGRectGetMaxY(imageView.frame) + 5, width: view.bounds.size.width, height: 45)
+        segmentedView.frame = CGRect(x: 0, y: CGRectGetMaxY(imageView.frame) + 10, width: view.bounds.size.width, height: 45)
         listContainerView.frame = CGRect(x: 0, y: CGRectGetMaxY(segmentedView.frame), width: view.bounds.size.width, height: view.bounds.size.height - CGRectGetMaxY(segmentedView.frame))
     }
-    
+    func changeImageViewAtIndex(index:Int) {
+        
+    }
 }
 
 
@@ -133,9 +141,17 @@ extension KNBaseReviewController: JXSegmentedViewDelegate {
             dotDataSource.dotStates[index] = false
             //再调用reloadItem(at: index)
             segmentedView.reloadItem(at: index)
+            changeImageViewAtIndex(index: index)
         }
 
         navigationController?.interactivePopGestureRecognizer?.isEnabled = (segmentedView.selectedIndex == 0)
+    }
+    func segmentedView(_ segmentedView: JXSegmentedView, didClickSelectedItemAt index: Int) {
+        changeImageViewAtIndex(index: index)
+    }
+    
+    func segmentedView(_ segmentedView: JXSegmentedView, didScrollSelectedItemAt index: Int) {
+        changeImageViewAtIndex(index: index)
     }
 }
 
@@ -150,6 +166,7 @@ extension KNBaseReviewController: JXSegmentedListContainerViewDataSource {
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         let contentArray = getContentArray()
         if index < contentArray.count {
+            changeImageViewAtIndex(index: index)
             let controller = KNBaseContentViewController()
             controller.content = contentArray[index]
             return controller

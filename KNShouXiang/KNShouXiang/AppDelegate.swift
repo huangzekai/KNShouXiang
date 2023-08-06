@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        setDefaultAppearance()
         
         let mainTabBarVc = KNNavigationController(rootViewController: KNHomeViewController())
         
@@ -23,25 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.overrideUserInterfaceStyle = .light
         
+        setDefaultAppearance()
+
         Bugly.start(withAppId: "a2cd2e37d8")
 
         
         return true
     }
     func setDefaultAppearance() {
-        //tabbar背景色
-        UITabBar.appearance().backgroundColor = UIColor.white
-        //tabbar字体颜色
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.white
-        
-        // 设置正常状态下的字体大小和颜色
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 12),
-                                                          .foregroundColor: UIColor.black], for: .normal)
-
-        // 设置选中状态下的字体大小和颜色
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 12),
-                                                          .foregroundColor: redColor], for: .selected)
+        let titleFont = UIFont.boldSystemFont(ofSize: 24) // 设置字体大小为 24
+        let appearance = UINavigationBar.appearance()
+        appearance.titleTextAttributes = [NSAttributedString.Key.font: titleFont]
     }
 
 }

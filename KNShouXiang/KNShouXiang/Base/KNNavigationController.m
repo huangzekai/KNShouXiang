@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         self.navigationBar.tintColor = [UIColor jk_colorWithHexString:@"151515"];
-        UIFont *font = [UIFont boldSystemFontOfSize:20];
+        UIFont *font = [UIFont boldSystemFontOfSize:24];
         NSDictionary *attributes = @{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor jk_colorWithHexString:@"151515"]};
         [self.navigationBar setTitleTextAttributes:attributes];
         [self.navigationBar setBarTintColor:[UIColor whiteColor]];

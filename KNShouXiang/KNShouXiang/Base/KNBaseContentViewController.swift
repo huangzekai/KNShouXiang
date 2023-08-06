@@ -16,8 +16,7 @@ class KNBaseContentViewController: KNBaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        textView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height - 30)
-        
+        textView.frame = CGRect(x: 10, y: 0, width: view.bounds.size.width - 20, height: view.bounds.size.height - 35)
     }
     
     override func viewDidLoad() {
@@ -27,10 +26,12 @@ class KNBaseContentViewController: KNBaseViewController {
         textView.textColor = .black
         textView.isEditable = false
         textView.backgroundColor = .clear
-        textView.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
 
         view.addSubview(textView)
-        
+        updateContent()
+    }
+    
+    func updateContent() {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 8 // 设置行距
         
@@ -40,9 +41,9 @@ class KNBaseContentViewController: KNBaseViewController {
         attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: 0, length: content.count))
         
         textView.attributedText = attributedString
-        
     }
 }
+
 
 extension KNBaseContentViewController: JXSegmentedListContainerViewListDelegate {
     func listView() -> UIView {

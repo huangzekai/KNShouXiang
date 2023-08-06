@@ -11,7 +11,7 @@ import JXSegmentedView
 
 class KNZhangGongViewController: KNBaseReviewController {
     override func getImageName()->String {
-        return "zhanggong"
+        return "bagong"
     }
     override func getTitleArray()->[String] {
         return ["手掌八宫内容","坎宫内容","根宫内容", "震宫内容", "巽宫内容", "离宫内容", "坤宫内容", "兑宫内容", "乾宫内容"]
