@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setDefaultAppearance()
 
-        Bugly.start(withAppId: "a2cd2e37d8")
+        Bugly.start(withAppId: "d19a08630c")
 
         
         return true

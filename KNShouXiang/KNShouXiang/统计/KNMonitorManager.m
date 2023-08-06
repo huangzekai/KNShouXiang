@@ -11,7 +11,7 @@
 #import <UMDevice/UMZid.h>
 
 //友盟appkey
-#define APP_KEY @"64c6155da1a164591b5c7965"
+#define APP_KEY @"64cf6973a1a164591b638c5a"
 #define APPSTORE @"App Store"
 
 @implementation KNMonitorManager
