@@ -22,7 +22,8 @@
 //        self.layer.masksToBounds = YES;
         
 //        self.backgroundColor = [UIColor jk_colorWithHexString:@"d7000f"];
-        self.backgroundColor = [UIColor jk_colorWithHexString:@"07C160"];
+//        self.backgroundColor = [UIColor jk_colorWithHexString:@"07C160"];
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"f1f2e5"];
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.imageView.hidden = NO;
@@ -32,7 +33,7 @@
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.hidden = NO;
         
-//        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self setTitleColor:BLACK_COLOR forState:UIControlStateNormal];
         
         self.layer.shadowColor = [UIColor grayColor].CGColor;
         self.layer.shadowOffset = CGSizeMake(5, 5);
@@ -55,9 +56,9 @@
     [super setHighlighted:highlighted];
 
     if (highlighted) {
-        self.backgroundColor = [UIColor jk_colorWithHexString:@"1aa85f"];
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"e3e4da"];
     } else {
-        self.backgroundColor = [UIColor jk_colorWithHexString:@"07C160"];
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"f1f2e5"];
     }
 }
 

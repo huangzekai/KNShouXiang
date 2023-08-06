@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setDefaultAppearance()
 
         Bugly.start(withAppId: "d19a08630c")
+        KNMonitorManager.initMonitor()
 
         
         return true

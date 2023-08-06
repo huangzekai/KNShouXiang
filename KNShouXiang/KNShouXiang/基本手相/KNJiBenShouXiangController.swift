@@ -27,7 +27,7 @@ class KNJiBenShouXiangController: KNBaseShouXiangController  {
                             NSLocalizedString("手的大小内容", comment: ""),
                             NSLocalizedString("手的长短内容", comment: ""),
                             NSLocalizedString("手的软硬内容", comment: ""),
-                            NSLocalizedString("五种手形内容", comment: "")]
+                            NSLocalizedString("方形手内容", comment: "")]
         return contentArray
     }
 }

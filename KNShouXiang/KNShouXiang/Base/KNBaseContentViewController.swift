@@ -12,15 +12,35 @@ import JXSegmentedView
 class KNBaseContentViewController: KNBaseViewController {
 
     let textView = UITextView()
+    var showImages = false
+    var imageArray = [String]()
+    var heigh = 0.0
     var content:String = ""
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        textView.frame = CGRect(x: 10, y: 0, width: view.bounds.size.width - 20, height: view.bounds.size.height - 35)
+        if showImages {
+            textView.frame = CGRect(x: 10, y: heigh + 5.0, width: view.bounds.size.width - 20.0, height: view.bounds.size.height - 35.0 - heigh - 5.0)
+        } else {
+            textView.frame = CGRect(x: 10, y: 0, width: view.bounds.size.width - 20, height: view.bounds.size.height - 35)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if showImages {
+            let width = (view.bounds.size.width - 30 * 2.0 - 15 * 2) / 3.0
+            var frame = CGRect(x: 30, y: 8, width: width, height: width * 0.8)
+            for imageName in imageArray {
+                let image = UIImage(named: imageName)
+                let imageview = UIImageView(image: image)
+                imageview.frame = frame
+                view.addSubview(imageview)
+                heigh = CGRectGetMaxY(imageview.frame)
+                frame.origin.x = CGRectGetMaxX(frame) + 15
+            }
+        }
         
         textView.font = UIFont.systemFont(ofSize: 18)
         textView.textColor = .black

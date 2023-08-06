@@ -100,6 +100,23 @@ extension KNBaseShouXiangController: JXSegmentedListContainerViewDataSource {
         if index < contentArray.count {
             let controller = KNBaseContentViewController()
             controller.content = contentArray[index]
+            
+            if self is KNAboutShouXiangViewController {
+                if index == 3 {
+                    controller.showImages = true
+                    controller.imageArray = ["p131","p132", "p133"]
+                }
+            } else if self is KNJiBenShouXiangController {
+                if index == 4 {
+                    let ctr = KNShouxingContentViewController()
+                    ctr.content = contentArray[index]
+                    return ctr
+                }
+                controller.showImages = false
+            } else {
+                controller.showImages = false
+            }
+            
             return controller
         }
         return KNBaseContentViewController()

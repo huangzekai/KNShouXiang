@@ -289,6 +289,15 @@
 		756BE13B2A7E8FE900359D5C /* more_picture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 756BE13A2A7E8FE900359D5C /* more_picture@3x.png */; };
 		756BE13D2A7E910700359D5C /* KNPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BE13C2A7E910700359D5C /* KNPicturesViewController.swift */; };
 		756C18722A7F9D9D000B09E5 /* comment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C18712A7F9D9D000B09E5 /* comment@3x.png */; };
+		756C18762A7FA3FF000B09E5 /* p131.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C18732A7FA3FF000B09E5 /* p131.png */; };
+		756C18772A7FA3FF000B09E5 /* p132.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C18742A7FA3FF000B09E5 /* p132.png */; };
+		756C18782A7FA3FF000B09E5 /* p133.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C18752A7FA3FF000B09E5 /* p133.png */; };
+		756C187A2A7FA78D000B09E5 /* KNShouxingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C18792A7FA78D000B09E5 /* KNShouxingContentViewController.swift */; };
+		756C18802A7FA989000B09E5 /* p244.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C187B2A7FA989000B09E5 /* p244.png */; };
+		756C18812A7FA989000B09E5 /* p242.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C187C2A7FA989000B09E5 /* p242.png */; };
+		756C18822A7FA989000B09E5 /* p245.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C187D2A7FA989000B09E5 /* p245.png */; };
+		756C18832A7FA989000B09E5 /* p243.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C187E2A7FA989000B09E5 /* p243.png */; };
+		756C18842A7FA989000B09E5 /* p241.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C187F2A7FA989000B09E5 /* p241.png */; };
 		757B59D32A75F77700269DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B59D22A75F77700269DCD /* AppDelegate.swift */; };
 		757B59D72A75F77700269DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B59D62A75F77700269DCD /* ViewController.swift */; };
 		757B59DA2A75F77700269DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757B59D82A75F77700269DCD /* Main.storyboard */; };
@@ -646,6 +655,15 @@
 		756BE13A2A7E8FE900359D5C /* more_picture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_picture@3x.png"; sourceTree = "<group>"; };
 		756BE13C2A7E910700359D5C /* KNPicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNPicturesViewController.swift; sourceTree = "<group>"; };
 		756C18712A7F9D9D000B09E5 /* comment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment@3x.png"; sourceTree = "<group>"; };
+		756C18732A7FA3FF000B09E5 /* p131.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p131.png; path = "手相图解/Payload/手相图解.app/p131.png"; sourceTree = SOURCE_ROOT; };
+		756C18742A7FA3FF000B09E5 /* p132.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p132.png; path = "手相图解/Payload/手相图解.app/p132.png"; sourceTree = SOURCE_ROOT; };
+		756C18752A7FA3FF000B09E5 /* p133.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p133.png; path = "手相图解/Payload/手相图解.app/p133.png"; sourceTree = SOURCE_ROOT; };
+		756C18792A7FA78D000B09E5 /* KNShouxingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNShouxingContentViewController.swift; sourceTree = "<group>"; };
+		756C187B2A7FA989000B09E5 /* p244.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p244.png; path = "手相图解/Payload/手相图解.app/p244.png"; sourceTree = SOURCE_ROOT; };
+		756C187C2A7FA989000B09E5 /* p242.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p242.png; path = "手相图解/Payload/手相图解.app/p242.png"; sourceTree = SOURCE_ROOT; };
+		756C187D2A7FA989000B09E5 /* p245.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p245.png; path = "手相图解/Payload/手相图解.app/p245.png"; sourceTree = SOURCE_ROOT; };
+		756C187E2A7FA989000B09E5 /* p243.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p243.png; path = "手相图解/Payload/手相图解.app/p243.png"; sourceTree = SOURCE_ROOT; };
+		756C187F2A7FA989000B09E5 /* p241.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p241.png; path = "手相图解/Payload/手相图解.app/p241.png"; sourceTree = SOURCE_ROOT; };
 		757B59CF2A75F77700269DCD /* KNShouXiang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNShouXiang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757B59D22A75F77700269DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757B59D62A75F77700269DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -775,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				756BDF0F2A7DECE600359D5C /* KNJiBenShouXiangController.swift */,
+				756C18792A7FA78D000B09E5 /* KNShouxingContentViewController.swift */,
 			);
 			path = "基本手相";
 			sourceTree = "<group>";
@@ -950,6 +969,14 @@
 		75B3BD772A76707B00FC348B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				756C187F2A7FA989000B09E5 /* p241.png */,
+				756C187C2A7FA989000B09E5 /* p242.png */,
+				756C187E2A7FA989000B09E5 /* p243.png */,
+				756C187B2A7FA989000B09E5 /* p244.png */,
+				756C187D2A7FA989000B09E5 /* p245.png */,
+				756C18732A7FA3FF000B09E5 /* p131.png */,
+				756C18742A7FA3FF000B09E5 /* p132.png */,
+				756C18752A7FA3FF000B09E5 /* p133.png */,
 				756C18712A7F9D9D000B09E5 /* comment@3x.png */,
 				756BE1072A7E8E7900359D5C /* p5341.png */,
 				756BE0F42A7E8E7800359D5C /* p5504.png */,
@@ -1428,6 +1455,7 @@
 				756BE04A2A7E25B100359D5C /* p5408.png in Resources */,
 				756BE0212A7E25B100359D5C /* p5435.png in Resources */,
 				756BE0052A7E25B100359D5C /* p5122.png in Resources */,
+				756C18812A7FA989000B09E5 /* p242.png in Resources */,
 				756BE0AD2A7E25B100359D5C /* p5335.png in Resources */,
 				756BE0032A7E25B100359D5C /* p5322.png in Resources */,
 				756BE01A2A7E25B100359D5C /* p5443.png in Resources */,
@@ -1454,6 +1482,7 @@
 				756BE0C62A7E25B100359D5C /* p5436.png in Resources */,
 				756BE0B12A7E25B100359D5C /* p5434.png in Resources */,
 				756BE00B2A7E25B100359D5C /* p5123.png in Resources */,
+				756C18842A7FA989000B09E5 /* p241.png in Resources */,
 				756BE13B2A7E8FE900359D5C /* more_picture@3x.png in Resources */,
 				756BE0C42A7E25B100359D5C /* p5502.png in Resources */,
 				757B59DC2A75F77800269DCD /* Assets.xcassets in Resources */,
@@ -1515,6 +1544,7 @@
 				756BE0C22A7E25B100359D5C /* p5401.png in Resources */,
 				756BE11C2A7E8E7900359D5C /* p5625.png in Resources */,
 				756BDF082A7DE83C00359D5C /* xianwen@3x.png in Resources */,
+				756C18762A7FA3FF000B09E5 /* p131.png in Resources */,
 				756BE0E42A7E25B100359D5C /* p5314.png in Resources */,
 				756BE0352A7E25B100359D5C /* p5229.png in Resources */,
 				756BE0062A7E25B100359D5C /* p5326.png in Resources */,
@@ -1531,6 +1561,7 @@
 				756BE0522A7E25B100359D5C /* p5306.png in Resources */,
 				B943E7522A773E60008067C2 /* ch3.png in Resources */,
 				756BE01F2A7E25B100359D5C /* p5325.png in Resources */,
+				756C18782A7FA3FF000B09E5 /* p133.png in Resources */,
 				756BE03D2A7E25B100359D5C /* p5527.png in Resources */,
 				756BE0242A7E25B100359D5C /* p5139.png in Resources */,
 				756BE1382A7E8E7900359D5C /* p5626.png in Resources */,
@@ -1564,6 +1595,7 @@
 				756BE0262A7E25B100359D5C /* p5303.png in Resources */,
 				756BE0042A7E25B100359D5C /* p5130.png in Resources */,
 				75B3BDA92A76707B00FC348B /* refresh@3x.png in Resources */,
+				756C18802A7FA989000B09E5 /* p244.png in Resources */,
 				756BE1252A7E8E7900359D5C /* p5618.png in Resources */,
 				756BE0AA2A7E25B100359D5C /* p5116.png in Resources */,
 				756BE0492A7E25B100359D5C /* p5508.png in Resources */,
@@ -1573,8 +1605,10 @@
 				756BE0A42A7E25B100359D5C /* p5532.png in Resources */,
 				756BE0F02A7E8BFE00359D5C /* p5604.png in Resources */,
 				756BE0652A7E25B100359D5C /* p5119.png in Resources */,
+				756C18822A7FA989000B09E5 /* p245.png in Resources */,
 				756BE0952A7E25B100359D5C /* p5228.png in Resources */,
 				756BE08B2A7E25B100359D5C /* p5250.png in Resources */,
+				756C18772A7FA3FF000B09E5 /* p132.png in Resources */,
 				756BE1292A7E8E7900359D5C /* p5613.png in Resources */,
 				756BE0A52A7E25B100359D5C /* p5144.png in Resources */,
 				756BE05D2A7E25B100359D5C /* p5500.png in Resources */,
@@ -1695,6 +1729,7 @@
 				756BE0D72A7E25B100359D5C /* p5405.png in Resources */,
 				756BE0D62A7E25B100359D5C /* p5526.png in Resources */,
 				756BE1282A7E8E7900359D5C /* p5531.png in Resources */,
+				756C18832A7FA989000B09E5 /* p243.png in Resources */,
 				756BE1332A7E8E7900359D5C /* p5612.png in Resources */,
 				75B3BDAF2A76707B00FC348B /* setting_normal@3x.png in Resources */,
 				756BE07E2A7E25B100359D5C /* p5333.png in Resources */,
@@ -1779,6 +1814,7 @@
 				756BDF102A7DECE600359D5C /* KNJiBenShouXiangController.swift in Sources */,
 				75B3BDA42A76707B00FC348B /* KNPrivacyViewController.m in Sources */,
 				75B3BDA02A76707B00FC348B /* JDSystemStatusBarHelpers.m in Sources */,
+				756C187A2A7FA78D000B09E5 /* KNShouxingContentViewController.swift in Sources */,
 				756BE13D2A7E910700359D5C /* KNPicturesViewController.swift in Sources */,
 				75B3BD982A76707B00FC348B /* JDStatusBarNotificationStyle.m in Sources */,
 				75B3BDBA2A76707B00FC348B /* KNMainTabbarController.m in Sources */,

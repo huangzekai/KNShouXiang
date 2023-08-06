@@ -13,6 +13,7 @@
 #import "KNBaseViewController.h"
 #import "KNHomeViewController.h"
 #import "KNNavigationController.h"
+#import "KNMonitorManager.h"
 #import <Bugly/Bugly.h>
 
 #endif /* KNShouXiang_Bridging_Header_h */
