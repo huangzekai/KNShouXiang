@@ -12,13 +12,14 @@
 #import "KNFeedBackViewController.h"
 #import "KNPrivacyViewController.h"
 
-#define ITUNES_URL @"https://apps.apple.com/app/id66455497057"
+#define ITUNES_URL [NSString stringWithFormat:@"https://apps.apple.com/app/id%@", APPLE_ID]
 
 typedef NS_ENUM(NSInteger, SettingType) {
     SettingTypeCheckUpdate = 0,
     SettingTypeShare = 1,
     SettingTypePrivacy = 2,
     SettingTypeFeedback = 3,
+    SettingTypeGoodReputation = 4,
 };
 
 @interface KNSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -68,7 +69,7 @@ typedef NS_ENUM(NSInteger, SettingType) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -122,6 +123,11 @@ typedef NS_ENUM(NSInteger, SettingType) {
             cell.imageView.image = [UIImage imageNamed:@"feedback@3x.png"];
             break;
         }
+        case SettingTypeGoodReputation: {
+            cell.textLabel.text = @"好评鼓励";
+            cell.imageView.image = [UIImage imageNamed:@"comment@3x.png"];
+            break;
+        }
             
         default:
             break;
@@ -155,6 +161,13 @@ typedef NS_ENUM(NSInteger, SettingType) {
         {
             KNFeedBackViewController *controller = [[KNFeedBackViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        case SettingTypeGoodReputation: {
+            // 替换为您的 App Store 应用程序 ID
+            NSString *urlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@?action=write-review", APPLE_ID];
+            NSURL *url = [NSURL URLWithString:urlString];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             break;
         }
             

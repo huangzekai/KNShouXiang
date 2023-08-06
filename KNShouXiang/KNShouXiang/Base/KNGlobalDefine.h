@@ -10,6 +10,9 @@
 #ifndef KNGlobalDefine_h
 #define KNGlobalDefine_h
 
+#define APPLE_ID @"6458547178"
+#define ITUNES_URL  [NSString stringWithFormat:@"https://apps.apple.com/app/id%@", APPLE_ID]
+
 #define VIP_STATE_CHANGE_NOTIFICATION @"vipStateChangeNotification"
 
 //按钮默认颜色

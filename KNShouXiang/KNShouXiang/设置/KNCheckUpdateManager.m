@@ -6,9 +6,9 @@
 //
 
 #import "KNCheckUpdateManager.h"
+#import "KNGlobalDefine.h"
 #import <UIKit/UIKit.h>
 
-#define ITUNES_URL @"https://apps.apple.com/app/id6455497057"
 
 @implementation KNCheckUpdateManager
 

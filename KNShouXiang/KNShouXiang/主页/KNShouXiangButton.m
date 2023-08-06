@@ -21,8 +21,8 @@
         self.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //        self.layer.masksToBounds = YES;
         
-        self.backgroundColor = [UIColor jk_colorWithHexString:@"d7000f"];
-        self.backgroundColor = BUTTON_SELECT_COLOR;
+//        self.backgroundColor = [UIColor jk_colorWithHexString:@"d7000f"];
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"07C160"];
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.imageView.hidden = NO;
@@ -32,7 +32,9 @@
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.hidden = NO;
         
-        self.layer.shadowColor = [UIColor blackColor].CGColor;
+//        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        self.layer.shadowColor = [UIColor grayColor].CGColor;
         self.layer.shadowOffset = CGSizeMake(5, 5);
         self.layer.shadowOpacity = 0.5;
         self.layer.shadowRadius = 4;
@@ -49,14 +51,14 @@
 //    self.titleLabel.frame = CGRectMake(self.imageView.jk_right + 8, space, self.jk_width - width - space * 3, self.jk_height - space * 2);
 //}
 
-//- (void)setHighlighted:(BOOL)highlighted {
-//    [super setHighlighted:highlighted];
-//
-//    if (highlighted) {
-//        self.backgroundColor = [UIColor jk_colorWithHexString:@"DFBE96"];
-//    } else {
-//        self.backgroundColor = [UIColor jk_colorWithHexString:@"DFBE96"];
-//    }
-//}
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+
+    if (highlighted) {
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"1aa85f"];
+    } else {
+        self.backgroundColor = [UIColor jk_colorWithHexString:@"07C160"];
+    }
+}
 
 @end

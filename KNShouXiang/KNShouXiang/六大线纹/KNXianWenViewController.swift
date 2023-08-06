@@ -78,10 +78,6 @@ class KNXianWenViewController: KNBaseReviewController {
         
         self.title = "六大线纹"
         
-        let image = UIImage(named: "more_picture")?.withRenderingMode(.alwaysOriginal) // 保持图像的原始颜色
-        let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(rightBarButtonTapped))
-        navigationItem.rightBarButtonItem = rightBarButton
-        
         let width = 240.0
         imageView.frame = CGRect(x: 20, y: 10, width: width, height: width)
         
@@ -96,7 +92,7 @@ class KNXianWenViewController: KNBaseReviewController {
             button.layer.cornerRadius = button.bounds.size.height / 2
             button.layer.masksToBounds = true
             button.setBackgroundImage(UIImage.from(color: .red), for: .selected)
-            button.setBackgroundImage(UIImage.from(color: grayColor), for: .normal)
+            button.setBackgroundImage(UIImage.from(color: UIColor(red: 232/255.0, green: 232/255.0, blue: 232/255.0, alpha: 232/255.0)), for: .normal)
             button.setTitle(titleArray[index], for: .normal)
             button.setTitleColor(.white, for: .selected)
             button.setTitleColor(blackColor, for: .normal)
@@ -115,6 +111,14 @@ class KNXianWenViewController: KNBaseReviewController {
     @objc func buttonTagAction(_ sender:UIButton) {
         let selectIndex = sender.tag
         currentSelectIndex = selectIndex - 100
+        
+        if currentSelectIndex == 0 {
+            self.navigationItem.rightBarButtonItem = nil
+        } else {
+            let image = UIImage(named: "more_picture")?.withRenderingMode(.alwaysOriginal) // 保持图像的原始颜色
+            let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(rightBarButtonTapped))
+            navigationItem.rightBarButtonItem = rightBarButton
+        }
         
         for index in 0..<7 {
             let button = view.viewWithTag(100 + index)
