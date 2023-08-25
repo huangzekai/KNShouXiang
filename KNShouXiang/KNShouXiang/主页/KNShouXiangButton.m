@@ -43,14 +43,14 @@
     return self;
 }
 
-//- (void)layoutSubviews {
-//    [super layoutSubviews];
-//    CGFloat space = 30;
-//    CGFloat width = self.jk_height - 2 * 20;
-//    self.imageView.frame = CGRectMake(space, 20, width, width);
-//    
-//    self.titleLabel.frame = CGRectMake(self.imageView.jk_right + 8, space, self.jk_width - width - space * 3, self.jk_height - space * 2);
-//}
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat space = 50;
+    CGFloat width = self.jk_height - 2 * 15;
+    self.imageView.frame = CGRectMake(space, 15, width, width);
+    
+    self.titleLabel.frame = CGRectMake(self.imageView.jk_right + 8, 15, self.jk_width - width - space * 2 - 15, self.jk_height - 15 * 2);
+}
 
 - (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];

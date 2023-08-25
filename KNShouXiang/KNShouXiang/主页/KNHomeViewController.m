@@ -18,6 +18,8 @@
 #import "KNToast.h"
 
 #define BUTTON_HEIGH 100
+#define BUTTON_SPACE 15
+#define BOTTOM_SPACE 60
 
 @interface KNHomeViewController ()
 
@@ -41,18 +43,22 @@
 
 - (void)addAllSubview {
     
-    NSArray *titleArray = @[@"如何看手相", @"基本手相", @"八大掌丘", @"手掌八宫", @"六大线纹"];
-    CGFloat width = self.view.bounds.size.width - 60;
+    NSArray *titleArray = @[@"如何看手相", @"初识手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知健康"];
+    NSArray *imageArray = @[@"shouxiangjiaocheng", @"jibenshouxiang", @"badazhangqiu", @"shouzhangbagong", @"liudaxianwen", @"shouxiangjiankang"];
+    CGFloat width = self.view.bounds.size.width - BOTTOM_SPACE;
     CGFloat y = 30;
-    CGFloat height = (self.view.jk_height - 30 - 60 - 20 * 4) / 5;
+    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / 6;
     
-    for (NSInteger index = 0; index < 5 ; index ++) {
+    for (NSInteger index = 0; index < 6 ; index ++) {
         KNShouXiangButton *button = [[KNShouXiangButton alloc] initWithFrame:CGRectMake(30, y, width, height)];
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
+        UIImage *image = [UIImage imageNamed:imageArray[index]];
+        [button setImage:image forState:UIControlStateNormal];
+        [button setImage:image forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 100 + index;
         [self.view addSubview:button];
-        y += (height + 20);
+        y += (height + BUTTON_SPACE);
     }
 }
 
@@ -60,12 +66,12 @@
     [super viewDidLayoutSubviews];
     
     CGFloat y = 30;
-    CGFloat width = self.view.bounds.size.width - 60;
-    CGFloat height = (self.view.jk_height - 30 - 60 - 20 * 4) / 5;
-    for (NSInteger index = 0; index < 5 ; index ++) {
+    CGFloat width = self.view.bounds.size.width - BOTTOM_SPACE;
+    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / 6;
+    for (NSInteger index = 0; index < 6 ; index ++) {
         UIButton *button = [self.view viewWithTag:100 + index];
         button.frame = CGRectMake(30, y, width, height);
-        y += (height + 20);
+        y += (height + BUTTON_SPACE);
     }
 }
 
@@ -94,6 +100,11 @@
         }
         case 4: {
             KNXianWenViewController *ctr = [[KNXianWenViewController alloc] init];
+            [self.navigationController pushViewController:ctr animated:YES];
+            break;
+        }
+        case 5: {
+            KNJianKangViewController *ctr = [[KNJianKangViewController alloc] init];
             [self.navigationController pushViewController:ctr animated:YES];
             break;
         }
