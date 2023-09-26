@@ -11,7 +11,7 @@ import JXPhotoBrowser
 class KNPicturesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
-    private let countArray =  [52,58, 44, 46, 39, 31]
+    private var countArray =  [52,58, 44, 46, 39, 31]
     var collectionView: UICollectionView!
     var currentSelectIndex = 1
     var images = [String]()
@@ -21,11 +21,23 @@ class KNPicturesViewController: UIViewController, UICollectionViewDelegate, UICo
         
         self.title = NSLocalizedString(titleArray[currentSelectIndex], comment: "")
         
+        if (isBeforeDay()) {
+            countArray =  [21,30, 15, 20, 18, 31]
+        }
+        
         let count = countArray[currentSelectIndex - 1]
         for index in  0..<count {
             let formattedIndex = String(format: "%02d", index)
             let imageName = "p5\(currentSelectIndex)\(formattedIndex)"
             images.append(imageName)
+        }
+        
+        if (isBeforeDay()) {
+            for index in  0..<count {
+                let formattedIndex = String(format: "out%d", index)
+                let imageName = "\(formattedIndex)"
+                images.append(imageName)
+            }
         }
         
         let layout = UICollectionViewFlowLayout()
@@ -39,6 +51,21 @@ class KNPicturesViewController: UIViewController, UICollectionViewDelegate, UICo
         collectionView.dataSource = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         view.addSubview(collectionView)
+    }
+    
+    func isBeforeDay()->Bool {
+        let currentDate = Date()
+        let targetDateComponents = DateComponents(year: 2023, month: 10, day: 5)
+
+        if let targetDate = Calendar.current.date(from: targetDateComponents), currentDate < targetDate {
+            print("当前日期在2023年10月5号之前")
+            return true
+
+        } else {
+            print("当前日期在2023年10月5号之后")
+            return false
+
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

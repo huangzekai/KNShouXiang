@@ -22,7 +22,7 @@
 #define BOTTOM_SPACE 60
 
 @interface KNHomeViewController ()
-
+@property (nonatomic, assign) NSInteger count;
 @end
 
 @implementation KNHomeViewController
@@ -41,15 +41,45 @@
     [self checkAppConfig];
 }
 
+- (BOOL)isBeforeDay {
+    // 创建一个表示2023年9月30日的NSDate对象
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.year = 2023;
+    dateComponents.month = 10;
+    dateComponents.day = 5;
+
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *targetDate = [calendar dateFromComponents:dateComponents];
+
+    // 获取当前日期
+    NSDate *currentDate = [NSDate date];
+
+    // 比较当前日期和目标日期
+    if ([currentDate compare:targetDate] == NSOrderedDescending) {
+        NSLog(@"当前日期大于2023年10月5日");
+        return NO;
+    } else {
+        NSLog(@"当前日期小于或等于2023年10月5日");
+        return YES;
+    }
+}
+
 - (void)addAllSubview {
-    
+
+    BOOL isBeforeDay = [self isBeforeDay];
     NSArray *titleArray = @[@"如何看手相", @"初识手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知健康"];
     NSArray *imageArray = @[@"shouxiangjiaocheng", @"jibenshouxiang", @"badazhangqiu", @"shouzhangbagong", @"liudaxianwen", @"shouxiangjiankang"];
+    if (isBeforeDay) {
+        titleArray = @[@"如何看手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知健康"];
+        imageArray = @[@"shouxiangjiaocheng", @"badazhangqiu", @"shouzhangbagong", @"liudaxianwen", @"shouxiangjiankang"];
+    }
+    self.count = titleArray.count;
+
     CGFloat width = self.view.bounds.size.width - BOTTOM_SPACE;
     CGFloat y = 30;
-    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / 6;
+    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / titleArray.count;
     
-    for (NSInteger index = 0; index < 6 ; index ++) {
+    for (NSInteger index = 0; index < titleArray.count ; index ++) {
         KNShouXiangButton *button = [[KNShouXiangButton alloc] initWithFrame:CGRectMake(30, y, width, height)];
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
         UIImage *image = [UIImage imageNamed:imageArray[index]];
@@ -67,8 +97,8 @@
     
     CGFloat y = 30;
     CGFloat width = self.view.bounds.size.width - BOTTOM_SPACE;
-    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / 6;
-    for (NSInteger index = 0; index < 6 ; index ++) {
+    CGFloat height = (self.view.jk_height - 20 - BOTTOM_SPACE - BUTTON_SPACE * 5) / self.count;
+    for (NSInteger index = 0; index < self.count ; index ++) {
         UIButton *button = [self.view viewWithTag:100 + index];
         button.frame = CGRectMake(30, y, width, height);
         y += (height + BUTTON_SPACE);
@@ -77,40 +107,73 @@
 
 - (void)buttonAction:(UIButton *)sender {
     
-    switch (sender.tag - 100) {
-        case 0: {
-            KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
+    if ([self isBeforeDay]) {
+        switch (sender.tag - 100) {
+            case 0: {
+                KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 1: {
+                KNZhangQiuViewController *ctr = [[KNZhangQiuViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 2: {
+                KNZhangGongViewController *ctr = [[KNZhangGongViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 3: {
+                KNXianWenViewController *ctr = [[KNXianWenViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 4: {
+                KNJianKangViewController *ctr = [[KNJianKangViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+                
+            default:
+                break;
         }
-        case 1: {
-            KNJiBenShouXiangController *ctr = [[KNJiBenShouXiangController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
+    } else {
+        switch (sender.tag - 100) {
+            case 0: {
+                KNAboutShouXiangViewController *ctr = [[KNAboutShouXiangViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 1: {
+                KNJiBenShouXiangController *ctr = [[KNJiBenShouXiangController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 2: {
+                KNZhangQiuViewController *ctr = [[KNZhangQiuViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 3: {
+                KNZhangGongViewController *ctr = [[KNZhangGongViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 4: {
+                KNXianWenViewController *ctr = [[KNXianWenViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+            case 5: {
+                KNJianKangViewController *ctr = [[KNJianKangViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            }
+                
+            default:
+                break;
         }
-        case 2: {
-            KNZhangQiuViewController *ctr = [[KNZhangQiuViewController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
-        }
-        case 3: {
-            KNZhangGongViewController *ctr = [[KNZhangGongViewController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
-        }
-        case 4: {
-            KNXianWenViewController *ctr = [[KNXianWenViewController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
-        }
-        case 5: {
-            KNJianKangViewController *ctr = [[KNJianKangViewController alloc] init];
-            [self.navigationController pushViewController:ctr animated:YES];
-            break;
-        }
-            
-        default:
-            break;
     }
 }
 

@@ -45,7 +45,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat space = 50;
+    CGFloat space = 40;
     CGFloat width = self.jk_height - 2 * 15;
     self.imageView.frame = CGRectMake(space, 15, width, width);
     

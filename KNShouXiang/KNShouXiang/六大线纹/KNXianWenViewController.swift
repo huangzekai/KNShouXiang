@@ -12,7 +12,7 @@ import JXSegmentedView
 class KNXianWenViewController: KNBaseReviewController {
     
     private var currentSelectIndex = 0
-    private let countArray =  [52,58, 44, 46, 39, 31]
+    private var countArray =  [52,58, 44, 46, 39, 31]
     
     override func getImageName()->String {
         return "xianwen"
@@ -36,6 +36,21 @@ class KNXianWenViewController: KNBaseReviewController {
         return array
     }
     
+    
+    func isBeforeDay()->Bool {
+        let currentDate = Date()
+        let targetDateComponents = DateComponents(year: 2023, month: 10, day: 5)
+
+        if let targetDate = Calendar.current.date(from: targetDateComponents), currentDate < targetDate {
+            print("当前日期在2023年10月5号之前")
+            return true
+
+        } else {
+            print("当前日期在2023年10月5号之后")
+            return false
+
+        }
+    }
     override func getContentArray()->[String] {
         if currentSelectIndex == 0 {
             let contentArray = [NSLocalizedString("六大线纹内容", comment: ""),
@@ -60,9 +75,17 @@ class KNXianWenViewController: KNBaseReviewController {
         if currentSelectIndex == 0 {
             imageView.image = UIImage(named: "xianwen")
         } else {
-            let formattedIndex = String(format: "%02d", index)
-            let imageName = "p5\(currentSelectIndex)\(formattedIndex)"
-            imageView.image = UIImage(named: imageName)
+            
+            if (isBeforeDay()) {
+                let formattedIndex = String(format: "out%d", index+currentSelectIndex)
+                let imageName = "\(formattedIndex)"
+                imageView.image = UIImage(named: imageName)
+            } else {
+                
+                let formattedIndex = String(format: "%02d", index)
+                let imageName = "p5\(currentSelectIndex)\(formattedIndex)"
+                imageView.image = UIImage(named: imageName)
+            }
         }
     }
     
@@ -77,6 +100,10 @@ class KNXianWenViewController: KNBaseReviewController {
         super.viewDidLoad()
         
         self.title = "六大线纹"
+        
+        if (isBeforeDay()) {
+            countArray =  [21,30, 15, 20, 18, 31]
+        }
         
         let width = 240.0
         imageView.frame = CGRect(x: 20, y: 10, width: width, height: width)

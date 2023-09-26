@@ -9,7 +9,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "NSDictionary+JKSafeAccess.h"
 
-#define CONFIG_URL @"https://chaoshandictionary-1251103646.cos.ap-guangzhou.myqcloud.com/config.json"
+#define CONFIG_URL @"https://chaoshandictionary-1251103646.cos.ap-guangzhou.myqcloud.com/shouxiangConfig.json"
 
 @interface KNAppConfigManager ()
 

@@ -14,7 +14,7 @@ class KNZhangGongViewController: KNBaseReviewController {
         return "bagong"
     }
     override func getTitleArray()->[String] {
-        return ["手掌八宫内容","坎宫内容","根宫内容", "震宫内容", "巽宫内容", "离宫内容", "坤宫内容", "兑宫内容", "乾宫内容"]
+        return ["手掌八宫","坎宫","根宫", "震宫", "巽宫", "离宫", "坤宫", "兑宫", "乾宫"]
     }
     
     override func getContentArray()->[String] {

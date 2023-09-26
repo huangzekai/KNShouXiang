@@ -13,6 +13,7 @@ class KNBaseContentViewController: KNBaseViewController {
 
     let textView = UITextView()
     var showImages = false
+    let bgView = UIView()
     var imageArray = [String]()
     var heigh = 0.0
     var content:String = ""
@@ -23,6 +24,7 @@ class KNBaseContentViewController: KNBaseViewController {
             textView.frame = CGRect(x: 10, y: heigh + 5.0, width: view.bounds.size.width - 20.0, height: view.bounds.size.height - 35.0 - heigh - 5.0)
         } else {
             textView.frame = CGRect(x: 10, y: 0, width: view.bounds.size.width - 20, height: view.bounds.size.height - 35)
+            bgView.isHidden = true
         }
     }
     
@@ -31,6 +33,10 @@ class KNBaseContentViewController: KNBaseViewController {
         
         if showImages {
             let width = (view.bounds.size.width - 30 * 2.0 - 15 * 2) / 3.0
+            bgView.frame = CGRect(x: 0, y: 8, width: view.bounds.size.width, height: width * 0.8)
+            bgView.backgroundColor = UIColor(hex: "FAFDD6")
+            view.addSubview(bgView)
+            
             var frame = CGRect(x: 30, y: 8, width: width, height: width * 0.8)
             for imageName in imageArray {
                 let image = UIImage(named: imageName)
