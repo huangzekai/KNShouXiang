@@ -239,7 +239,24 @@
             [defaults synchronize];
 
             // 显示评价弹框
-            [SKStoreReviewController requestReview];
+            if (@available(iOS 14.0, *)) {
+                UIWindowScene *activeScene = nil;
+                for (UIScene *scene in UIApplication.sharedApplication.connectedScenes) {
+                    if ([scene isKindOfClass:UIWindowScene.class] &&
+                        scene.activationState == UISceneActivationStateForegroundActive) {
+                        activeScene = (UIWindowScene *)scene;
+                        break;
+                    }
+                }
+                if (activeScene) {
+                    [SKStoreReviewController requestReviewInScene:activeScene];
+                }
+            } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                [SKStoreReviewController requestReview];
+#pragma clang diagnostic pop
+            }
         }
     }
 }
