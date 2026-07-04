@@ -224,7 +224,7 @@
 "compass.rhythm.item.2.title" = "深さ";
 "compass.rhythm.item.2.body" = "線が急に浅く乱れるときは、まず睡眠や負荷を記録し、すぐ結論にしない。";
 "compass.rhythm.item.3.title" = "弾力";
-"compass.rhythm.item.3.body" = "押した後の戻りは状態観察に限る。状态診断や専門助言の代わりにしない。";
+"compass.rhythm.item.3.body" = "押した後の戻りは状態観察に限る。専門的な助言の代わりにはしない。";
 "compass.rhythm.item.4.title" = "左右の手";
 "compass.rhythm.item.4.body" = "左右差は長期観察に向く。結論より変化を記録する。";
 
@@ -340,7 +340,7 @@
 "atlas.category.tutorial.title" = "手相入門";
 "atlas.category.tutorial.subtitle" = "撮影、定位、拡大、見直し。";
 "atlas.category.rhythm.title" = "掌色リズム";
-"atlas.category.rhythm.subtitle" = "状態を記録し、診断はしない。";
+"atlas.category.rhythm.subtitle" = "状態を記録し、観察にとどめる。";
 "line.overview.title" = "六大線紋";
 "line.overview.subtitle" = "主線を選び、全体図も見る";
 "line.overview.choose" = "主線を選ぶ";

@@ -340,7 +340,7 @@
 "atlas.category.tutorial.title" = "看掌入门";
 "atlas.category.tutorial.subtitle" = "拍照、定位、放大、复看。";
 "atlas.category.rhythm.title" = "掌色节律";
-"atlas.category.rhythm.subtitle" = "记录状态，不做诊断。";
+"atlas.category.rhythm.subtitle" = "记录状态，仅作观察。";
 "line.overview.title" = "六大线纹";
 "line.overview.subtitle" = "先选主线，再看总图";
 "line.overview.choose" = "选择主线";
