@@ -19,9 +19,9 @@ class KNXianWenViewController: KNBaseReviewController {
     }
     override func getTitleArray()->[String] {
         if currentSelectIndex == 0 {
-            return ["六大线纹","生命线『地纹』","智慧线『人纹』", "感情线『天纹』", "命运线『天喜纹』", "婚姻线『爱情线』", "太阳线『成功线』"]
+            return ["六大线纹","生命线『地纹』","智慧线『人纹』", "感情线『天纹』", "事业线『天喜纹』", "关系短纹『亲密关系线』", "太阳线『认可线』"]
         }
-        let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
+        let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "事业线", "关系短纹", "太阳线"]
         let count = countArray[currentSelectIndex - 1]
         
         var array = [String]()
@@ -110,7 +110,7 @@ class KNXianWenViewController: KNBaseReviewController {
         
         bgView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: CGRectGetMaxY(imageView.frame) + 10)
         
-        let titleArray = ["各式线纹","生命线", "智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
+        let titleArray = ["各式线纹","生命线", "智慧线", "感情线", "事业线", "关系短纹", "太阳线"]
         var frame = CGRect(x: CGRectGetMaxX(imageView.frame) + 5.0, y: 10, width: view.bounds.size.width - CGRectGetMaxX(imageView.frame) - 20, height: 30)
         for index in 0..<7 {
             let button = UIButton(type: .system)

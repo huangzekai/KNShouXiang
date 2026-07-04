@@ -7,7 +7,7 @@
       "internalID" : "0C9AE7AD-5DD4-4750-AE36-C5B327836D77",
       "localizations" : [
         {
-          "description" : "一次购买，永久解锁全部图鉴深度解读并移除广告。",
+          "description" : "一次购买，永久查看全部图鉴完整图注并移除广告。",
           "displayName" : "终身会员",
           "locale" : "zh-Hans"
         },
@@ -38,7 +38,7 @@
       "id" : "C2E8FF5D",
       "localizations" : [
         {
-          "customAppName" : "手相图鉴",
+          "customAppName" : "掌纹图谱",
           "locale" : "zh-Hans"
         },
         {
@@ -62,7 +62,7 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "按月解锁全部 270 张图鉴深度解读并移除广告。",
+              "description" : "按月查看全部 270 张图鉴完整图注并移除广告。",
               "displayName" : "月会员",
               "locale" : "zh-Hans"
             },
@@ -92,7 +92,7 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "按年解锁全部 270 张图鉴深度解读并移除广告。",
+              "description" : "按年查看全部 270 张图鉴完整图注并移除广告。",
               "displayName" : "年会员",
               "locale" : "zh-Hans"
             },

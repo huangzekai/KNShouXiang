@@ -1,9 +1,9 @@
-"app.display_name" = "手相圖鑑";
+"app.display_name" = "掌紋圖譜";
 "tab.home" = "首頁";
 "tab.atlas" = "圖鑑";
 "tab.path" = "學徑";
 "tab.plan" = "規劃";
-"home.title" = "手相圖鑑";
+"home.title" = "掌紋圖譜";
 "home.subtitle" = "先看位置，再讀變化";
 "home.main_map.title" = "六大主線地圖";
 "home.beginner_path.title" = "新手路徑";
@@ -26,7 +26,7 @@
 "line.life.title" = "生命線";
 "line.life.subtitle" = "看活力與節奏";
 "line.life.summary" = "從虎口附近環繞拇指根部向腕部下行，適合觀察體力儲備、恢復節奏和生活穩定感。";
-"line.life.observation" = "先看弧度是否包住金星丘，再看深淺、連續性與末端走向。不要只憑長短判斷壽命。";
+"line.life.observation" = "先看弧度是否包住金星丘，再看深淺、連續性與末端走向。不要只憑長短判斷生命長度。";
 "line.life.traditional_meaning" = "生命線在傳統手相裡偏向體能、行動力和生活根基。深長清晰常被視為氣力充足，斷續細弱則提示節奏容易被壓力打亂。";
 "line.life.confusion" = "生命線容易與智慧線起點混在一起，觀察時先找到虎口下方的弧形主線。";
 "line.life.tags" = "弧度|深淺|斷續|末端";
@@ -123,12 +123,12 @@
 "line.sun.variant.4.meaning" = "傳統上視為被看見的機會增強。";
 "line.sun.variant.4.observation" = "星紋必須由短線清楚交會，不是雜亂紋。";
 
-"line.marriage.title" = "婚姻線";
+"line.marriage.title" = "關係短紋";
 "line.marriage.subtitle" = "看親密關係節奏";
 "line.marriage.summary" = "位於小指下方掌側的短橫紋，更適合看關係態度、親密節奏和重要關係節點。";
 "line.marriage.observation" = "曲起小指側看會更清楚。先數主紋，再看深淺、方向和分叉。";
-"line.marriage.traditional_meaning" = "婚姻線在傳統手相中不只看婚姻數量，更看關係品質、投入方式和親密關係中的穩定度。";
-"line.marriage.confusion" = "婚姻線很短，位置在掌側，不應畫成穿過掌心的大橫線。";
+"line.marriage.traditional_meaning" = "關係短紋在傳統手相中不只看關係數量，更看關係品質、投入方式和親密關係中的穩定度。";
+"line.marriage.confusion" = "關係短紋很短，位置在掌側，不應畫成穿過掌心的大橫線。";
 "line.marriage.tags" = "數量|深淺|方向|分叉";
 "line.marriage.variant.1.title" = "一條清晰";
 "line.marriage.variant.1.meaning" = "關係標準明確，投入較集中。";
@@ -148,7 +148,7 @@
 "path.step.1.detail" = "先拍照保存，再對照左右手。不要在手掌緊繃、過冷或剛運動後立刻判斷。";
 "path.step.2.title" = "先定位置";
 "path.step.2.action" = "用六大主線地圖找到線的位置。";
-"path.step.2.detail" = "先看生命線、智慧線、感情線三條主線，再補充事業線、太陽線、婚姻線。";
+"path.step.2.detail" = "先看生命線、智慧線、感情線三條主線，再補充事業線、太陽線、關係短紋。";
 "path.step.3.title" = "再讀變化";
 "path.step.3.action" = "按深淺、長度、連續性、分叉四個維度記錄。";
 "path.step.3.detail" = "每次只看一條線，避免把雜紋、皮膚紋、指節紋混到主線裡。";
@@ -164,7 +164,7 @@
 
 "tab.today" = "今日";
 "tab.compass" = "觀掌";
-"tab.ask" = "問事";
+"tab.ask" = "主題";
 "tab.learn" = "修習";
 "tab.mine" = "我的";
 "line.atlas_count_format" = "%@ · %d 張";
@@ -179,7 +179,7 @@
 "today.primary.subtitle" = "每天只學一個觀察動作，先建立位置感。";
 "today.primary.footnote" = "第 1 天：分清主線與雜紋";
 "today.library.title" = "藏書閣有新圖";
-"today.library.subtitle" = "線法、掌丘、符號和問事路徑集中在這裡。";
+"today.library.subtitle" = "線法、掌丘、符號和主題路徑集中在這裡。";
 "today.library.footnote" = "270 張線相圖譜容量";
 
 "compass.title" = "觀掌";
@@ -189,7 +189,7 @@
 "compass.detail.reading_order" = "閱讀順序";
 "compass.lines.title" = "線 · 主線與支線";
 "compass.lines.subtitle" = "六條主線先定位，再看深淺、斷續、分叉。";
-"compass.lines.detail" = "適合入門和複查，是問事前最重要的一層。";
+"compass.lines.detail" = "適合入門和複查，是主題前最重要的一層。";
 "compass.lines.total_label" = "270 張線相圖譜";
 "compass.lines.total_body" = "首版按六條主線拆成 52、58、44、46、39、31 個變化位，後續每個變化位都可以配獨立圖。";
 "compass.lines.collection.title" = "六條線索";
@@ -217,44 +217,44 @@
 "compass.signs.item.4.title" = "三角紋";
 "compass.signs.item.4.body" = "三線閉合較清楚才成立，通常作為能力結構或資源匯聚的輔助標記。";
 "compass.rhythm.title" = "色 · 節律觀察";
-"compass.rhythm.subtitle" = "看掌色、彈性和近期狀態，不做醫療判斷。";
+"compass.rhythm.subtitle" = "看掌色、彈性和近期狀態，不做專業判斷。";
 "compass.rhythm.detail" = "顏色和紋理會受光線、溫度、作息影響，只能做日常觀察記錄。";
 "compass.rhythm.item.1.title" = "掌色";
 "compass.rhythm.item.1.body" = "先在自然光下看整體色澤，再比較掌心、指腹和掌丘區域的差異。";
 "compass.rhythm.item.2.title" = "深淺";
 "compass.rhythm.item.2.body" = "線條突然變淺、變亂時，先記錄近期作息和壓力，不直接當作定論。";
 "compass.rhythm.item.3.title" = "彈性";
-"compass.rhythm.item.3.body" = "按壓回彈只能作為狀態觀察，不能替代身體檢查或醫學建議。";
+"compass.rhythm.item.3.body" = "按壓回彈只能作為狀態觀察，不能替代身體檢查或專業建議。";
 "compass.rhythm.item.4.title" = "左右手";
 "compass.rhythm.item.4.body" = "左右手差異適合長期複看，重點記錄變化，而不是一次性判斷好壞。";
 
-"ask.title" = "問事";
+"ask.title" = "主題";
 "ask.subtitle" = "從問題出發，組合看線";
 "ask.guide.title" = "先問清楚，再看掌";
 "ask.guide.body" = "每次只帶一個問題進入：關係、思考、行動或精力。這樣讀圖更清楚，也不會把所有紋路混成一句籠統結論。";
-"ask.love.title" = "問事 · 關係表達";
+"ask.love.title" = "主題 · 關係表達";
 "ask.love.subtitle" = "親密關係、表達節奏、承諾標準。";
-"ask.love.focus" = "先定位感情線，再補看婚姻線";
-"ask.thinking.title" = "問事 · 思考方式";
+"ask.love.focus" = "先定位感情線，再補看關係短紋";
+"ask.thinking.title" = "主題 · 思考方式";
 "ask.thinking.subtitle" = "學習、判斷、溝通和注意力模式。";
 "ask.thinking.focus" = "先定位智慧線，再看它的方向和末端";
-"ask.action.title" = "問事 · 行動事業";
+"ask.action.title" = "主題 · 行動事業";
 "ask.action.subtitle" = "目標感、職業節奏、責任變化。";
 "ask.action.focus" = "先看事業線，再補看太陽線和木星丘";
-"ask.rhythm.title" = "問事 · 精力節律";
+"ask.rhythm.title" = "主題 · 精力節律";
 "ask.rhythm.subtitle" = "恢復感、穩定性、近期狀態。";
 "ask.rhythm.focus" = "先看生命線弧度，再記錄掌色和線深";
 "ask.detail.focus_title" = "本頁先看";
 "ask.detail.steps_title" = "四步讀法";
 "ask.detail.steps_subtitle" = "把觀察拆成順序，避免一眼定性。";
 "ask.love.step.1.title" = "找位置";
-"ask.love.step.1.body" = "確認感情線是否位於指根下方，婚姻線是否在小指下掌側短橫紋區域。";
+"ask.love.step.1.body" = "確認感情線是否位於指根下方，關係短紋是否在小指下掌側短橫紋區域。";
 "ask.love.step.2.title" = "看末端";
 "ask.love.step.2.body" = "感情線末端偏食指、中指或小指側，會影響傳統解釋裡的關係標準。";
 "ask.love.step.3.title" = "看連續";
 "ask.love.step.3.body" = "鏈狀、斷續、島紋要和皮膚細紋區分，先放大圖再判斷。";
 "ask.love.step.4.title" = "合併關係節奏";
-"ask.love.step.4.body" = "婚姻線只補充親密節奏，不單獨用來判斷婚姻次數或結論。";
+"ask.love.step.4.body" = "關係短紋只補充親密節奏，不單獨用來判斷關係次數或結論。";
 "ask.thinking.step.1.title" = "確認主線";
 "ask.thinking.step.1.body" = "智慧線從虎口附近進入掌心，通常位於感情線下方。";
 "ask.thinking.step.2.title" = "看方向";
@@ -287,19 +287,19 @@
 "learn.seven_day.title" = "七日識掌";
 "learn.seven_day.subtitle" = "由淺入深學習主線、變化、關係與認可線。";
 "learn.library.title" = "藏書閣";
-"learn.library.subtitle" = "按線法、掌丘、符號、問事路徑收藏完整內容。";
+"learn.library.subtitle" = "按線法、掌丘、符號、主題路徑收藏完整內容。";
 "learn.day.1.title" = "第 1 日 · 三線定位";
 "learn.day.1.body" = "只找生命線、智慧線、感情線三條主線，拍照並標記位置。";
 "learn.day.2.title" = "第 2 日 · 生命線弧度";
-"learn.day.2.body" = "比較生命線弧度、深淺和連續性，避免用長短直接判斷壽命。";
+"learn.day.2.body" = "比較生命線弧度、深淺和連續性，避免用長短直接判斷生命長度。";
 "learn.day.3.title" = "第 3 日 · 智慧線方向";
 "learn.day.3.body" = "觀察智慧線進入掌心後的方向，記錄平直、下垂或末端分叉。";
 "learn.day.4.title" = "第 4 日 · 感情線分型";
 "learn.day.4.body" = "觀察感情線終點與線體狀態，避免把局部褶皺當成完整分型。";
 "learn.day.5.title" = "第 5 日 · 事業線階段";
 "learn.day.5.body" = "查找事業線的起點和連續性，記錄職業節奏可能出現的階段變化。";
-"learn.day.6.title" = "第 6 日 · 婚姻線邊界";
-"learn.day.6.body" = "確認婚姻線位於小指下方掌側，重點看深淺、方向和主次。";
+"learn.day.6.title" = "第 6 日 · 關係短紋邊界";
+"learn.day.6.body" = "確認關係短紋位於小指下方掌側，重點看深淺、方向和主次。";
 "learn.day.7.title" = "第 7 日 · 組合複盤";
 "learn.day.7.body" = "用一組圖例做綜合複盤，寫出位置、變化、組合和保留判斷。";
 
@@ -312,7 +312,7 @@
 "library.category.mounts.subtitle" = "八大掌丘、區域邊界和組合解釋。";
 "library.category.signs.title" = "特殊紋";
 "library.category.signs.subtitle" = "星、十字、島、三角、格紋等輔助符號。";
-"library.category.questions.title" = "問事路徑";
+"library.category.questions.title" = "主題路徑";
 "library.category.questions.subtitle" = "關係、思考、行動和精力四類問題模板。";
 
 "mine.title" = "我的";
@@ -320,17 +320,17 @@
 "mine.note.title" = "觀察筆記";
 "mine.note.body" = "後續可保存左右手照片、標註圖和每次複看的結論。";
 "mine.disclaimer.title" = "使用邊界";
-"mine.disclaimer.body" = "本應用用於傳統文化學習和自我觀察，不提供醫療、法律或投資判斷。";
+"mine.disclaimer.body" = "本應用用於傳統文化學習和自我觀察，不提供專業、法律或現實判斷。";
 
 /* V6 Image-first atlas */
 "tab.gallery" = "圖庫";
 "tab.favorites" = "收藏";
-"atlas.home.title" = "手相圖鑑";
+"atlas.home.title" = "掌紋圖譜";
 "atlas.home.subtitle" = "看圖定位，再讀圖註";
 "atlas.home.categories" = "圖鑑分類";
 "atlas.home.categories.subtitle" = "點圖進入";
 "atlas.category.lines.title" = "六大線紋";
-"atlas.category.lines.subtitle" = "生命、智慧、感情、事業、婚姻、太陽線。";
+"atlas.category.lines.subtitle" = "生命、智慧、感情、事業、关系、太陽線。";
 "atlas.category.mounts.title" = "八大掌丘";
 "atlas.category.mounts.subtitle" = "掌心區域與線條落點。";
 "atlas.category.palaces.title" = "手掌八宮";
@@ -369,7 +369,7 @@
 "gallery.root.subtitle" = "按圖集瀏覽，不按文章瀏覽";
 "detail.position" = "位置";
 "detail.observation" = "觀察";
-"detail.traditional_reading" = "傳統解讀";
+"detail.traditional_reading" = "傳統術語";
 "gallery.life.position" = "從虎口附近起，沿拇指根部外側成弧線，下行至腕部方向。";
 "gallery.life.observation" = "先看主線是否完整，再看末端分支。細碎皮膚紋不當作主線判斷。";
 "gallery.life.reading" = "生命線變化常用於傳統手相裡的精力節奏和生活穩定感觀察。";
@@ -384,7 +384,7 @@
 "gallery.career.reading" = "事業線變化常用於觀察目標路徑、責任階段和外部牽引。";
 "gallery.marriage.position" = "位於小指下方掌側，是短橫紋區域。";
 "gallery.marriage.observation" = "曲起小指側看更清楚，先數主紋，再看深淺、方向和分叉。";
-"gallery.marriage.reading" = "婚姻線更適合看親密關係節奏，不適合單獨判斷結論。";
+"gallery.marriage.reading" = "關係短紋更適合看親密關係節奏，不適合單獨判斷結論。";
 "gallery.sun.position" = "位於無名指下方，多為短縱線。";
 "gallery.sun.observation" = "先確認位置靠無名指下，再看清晰度、長度和支線。";
 "gallery.sun.reading" = "太陽線變化常用於觀察表達、作品意識和被看見的方式。";
@@ -395,10 +395,10 @@
 "atlas.static.note.title" = "圖鑑說明";
 "atlas.static.note.body" = "這一頁先保留圖集結構，正式重構時會替換為統一新風格圖片。";
 
-"detail.modern_reading" = "現代轉譯";
-"detail.misread" = "誤判鑑別";
+"detail.modern_reading" = "現代觀察";
+"detail.misread" = "誤判辨析";
 "detail.judgement" = "綜合研判";
-"detail.action_advice" = "行動建議";
+"detail.action_advice" = "觀察提示";
 "detail.disclaimer" = "使用邊界";
 "learn.day.examples_format" = "%d 張配套圖例";
 "learn.day.detail.goal" = "今日目標";
@@ -406,10 +406,10 @@
 "learn.day.detail.examples.subtitle" = "先看圖，再進入單圖專業解讀。";
 "learn.day.detail.practice" = "練習方法";
 "learn.day.1.subtitle" = "生命線、智慧線、感情線是入門座標。";
-"learn.day.1.goal" = "先建立手掌座標感：找到虎口、掌心上區和三條基礎主線的位置，暫時不判斷吉凶。";
+"learn.day.1.goal" = "先建立手掌座標感：找到虎口、掌心上區和三條基礎主線的位置，暫時不判斷结果。";
 "learn.day.1.practice" = "在自然光下拍一張掌心照片，用三種顏色標出生命線、智慧線、感情線。只記錄起點、走向和是否連續。";
 "learn.day.2.subtitle" = "從窄弧、標準弧到階段變化。";
-"learn.day.2.goal" = "理解生命線不等於壽命線，重點看金星丘包圍範圍、線體深淺和中段變化。";
+"learn.day.2.goal" = "理解生命線不等於生命長度線，重點看金星丘包圍範圍、線體深淺和中段變化。";
 "learn.day.2.practice" = "對照三張生命線圖例，判斷自己的弧度屬於窄、標準或寬，再檢查是否有明顯斷續或支線。";
 "learn.day.3.subtitle" = "平直、下垂、分叉對應不同思考習慣。";
 "learn.day.3.goal" = "掌握智慧線的主軸方向，區分事實型、想像型和雙向切換型思考傾向。";
@@ -421,23 +421,23 @@
 "learn.day.5.goal" = "理解事業線不是人人都有，也不代表職業成敗；它更適合看責任結構和階段轉換。";
 "learn.day.5.practice" = "先找掌心縱線是否存在，再看它從腕部、月丘或生命線附近起步，最後記錄中段是否被橫線截斷。";
 "learn.day.6.subtitle" = "短橫紋只看關係節奏，不做絕對斷語。";
-"learn.day.6.goal" = "掌握婚姻線的正確位置：小指下方掌側短橫紋，不能畫到掌心，也不能用數量簡單推斷關係結局。";
+"learn.day.6.goal" = "掌握關係短紋的正確位置：小指下方掌側短橫紋，不能畫到掌心，也不能用數量簡單推斷關係結局。";
 "learn.day.6.practice" = "輕輕彎曲小指側觀察掌邊，分清主紋和淺皮紋，再看末端上揚、下垂或分叉。";
 "learn.day.7.subtitle" = "把太陽線、事業線和情緒線放在同一張圖裡複查。";
-"learn.day.7.goal" = "完成一次專業化表達：位置、形態、傳統釋義、現代轉譯、誤判邊界和行動建議都要出現。";
+"learn.day.7.goal" = "完成一次專業化表達：位置、形態、傳統術語、現代觀察、誤判邊界和觀察提示都要出現。";
 "learn.day.7.practice" = "任選一個問題，至少引用三張圖例寫一段觀察。結論必須保留邊界：單紋只作參考，需結合左右手與近期狀態。";
-"commerce.paywall.title" = "解鎖完整圖鑑";
+"commerce.paywall.title" = "打開完整圖鑑";
 "commerce.paywall.monthly" = "月會員";
 "commerce.paywall.yearly" = "年會員";
 "commerce.paywall.lifetime" = "終身會員";
 "commerce.unlock.watch_ad" = "觀看廣告，今日解鎖";
 "commerce.unlock.subscribe" = "開通會員解鎖全部";
-"commerce.paywall.subtitle" = "去廣告，解鎖 270 張圖鑑深度解讀";
+"commerce.paywall.subtitle" = "去廣告，查看 270 張圖鑑完整圖註";
 "commerce.paywall.benefits.title" = "會員權益";
-"commerce.paywall.benefits.body" = "完整查看傳統釋義、現代轉譯、誤判鑑別、綜合研判和行動建議。會員狀態下不請求廣告，也不展示廣告入口。";
+"commerce.paywall.benefits.body" = "完整查看傳統術語、現代觀察、誤判辨析、綜合研判和觀察提示。會員狀態下不請求廣告，也不展示廣告入口。";
 "commerce.paywall.monthly.subtitle" = "適合短期學習，按月自動續訂。";
 "commerce.paywall.yearly.subtitle" = "適合系統學習，全年完整訪問。";
 "commerce.paywall.lifetime.subtitle" = "一次買斷，永久解鎖目前和後續圖鑑內容。";
 "commerce.paywall.restore" = "恢復購買";
-"commerce.locked.title" = "深度解讀已鎖定";
-"commerce.locked.body" = "本圖的基礎位置和觀察方法可免費查看。傳統釋義、現代轉譯、誤判鑑別、綜合研判和行動建議需要解鎖。";
+"commerce.locked.title" = "完整圖註已鎖定";
+"commerce.locked.body" = "本圖的基礎位置和觀察方法可免費查看。傳統術語、現代觀察、誤判辨析、綜合研判和觀察提示需要解鎖。";

@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"手相图鉴";
+    self.title = @"掌纹图谱";
     
     [self addRightbarButton];
     
@@ -67,10 +67,10 @@
 - (void)addAllSubview {
 
     BOOL isBeforeDay = [self isBeforeDay];
-    NSArray *titleArray = @[@"如何看手相", @"初识手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知健康"];
+    NSArray *titleArray = @[@"如何看手相", @"初识手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知状态"];
     NSArray *imageArray = @[@"shouxiangjiaocheng", @"jibenshouxiang", @"badazhangqiu", @"shouzhangbagong", @"liudaxianwen", @"shouxiangjiankang"];
     if (isBeforeDay) {
-        titleArray = @[@"如何看手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知健康"];
+        titleArray = @[@"如何看手相", @"八大掌丘", @"手掌八宫", @"六大线纹", @"观手知状态"];
         imageArray = @[@"shouxiangjiaocheng", @"badazhangqiu", @"shouzhangbagong", @"liudaxianwen", @"shouxiangjiankang"];
     }
     self.count = titleArray.count;

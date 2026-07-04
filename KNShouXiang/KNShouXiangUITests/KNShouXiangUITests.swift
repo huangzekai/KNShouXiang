@@ -17,7 +17,7 @@ final class KNShouXiangUITests: XCTestCase {
         app.launchArguments = ["-AppleLanguages", "(zh-Hans)", "-AppleLocale", "zh_Hans_CN"]
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["手相图鉴"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["掌纹图谱"].waitForExistence(timeout: 8))
         XCTAssertTrue(app.tabBars.buttons["图鉴"].exists)
         XCTAssertTrue(app.tabBars.buttons["图库"].exists)
         XCTAssertTrue(app.tabBars.buttons["学径"].exists)
@@ -40,7 +40,7 @@ final class KNShouXiangUITests: XCTestCase {
         eighthExample.tap()
         XCTAssertTrue(app.navigationBars["生命线 · 第 8 种"].waitForExistence(timeout: 4))
         XCTAssertTrue(app.staticTexts["点图放大"].waitForExistence(timeout: 4))
-        XCTAssertTrue(app.staticTexts["深度解读已锁定"].waitForExistence(timeout: 4))
+        XCTAssertTrue(app.staticTexts["完整图注已锁定"].waitForExistence(timeout: 4))
         XCTAssertTrue(app.buttons["开通会员解锁全部"].waitForExistence(timeout: 4))
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
@@ -61,7 +61,7 @@ final class KNShouXiangUITests: XCTestCase {
         app.launchArguments = ["-AppleLanguages", "(ja)", "-AppleLocale", "ja_JP"]
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["手相図鑑"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["掌紋図譜"].waitForExistence(timeout: 8))
         XCTAssertTrue(app.tabBars.buttons["図鑑"].exists)
         XCTAssertTrue(app.tabBars.buttons["画像集"].exists)
         XCTAssertTrue(app.tabBars.buttons["学習路"].exists)

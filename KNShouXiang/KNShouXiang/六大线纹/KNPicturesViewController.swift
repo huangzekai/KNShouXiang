@@ -10,7 +10,7 @@ import JXPhotoBrowser
 
 class KNPicturesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "命运线", "婚姻线", "太阳线"]
+    let titleArray = ["六大线纹", "生命线","智慧线", "感情线", "事业线", "关系短纹", "太阳线"]
     private var countArray =  [52,58, 44, 46, 39, 31]
     var collectionView: UICollectionView!
     var currentSelectIndex = 1
