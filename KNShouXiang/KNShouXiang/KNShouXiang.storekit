@@ -1,0 +1,118 @@
+{
+  "identifier" : "4E9C9B7E-9F1B-4B4B-9FD5-4BB4D1897501",
+  "nonConsumables" : [
+    {
+      "displayPrice" : "¥68.00",
+      "familyShareable" : false,
+      "internalID" : "0C9AE7AD-5DD4-4750-AE36-C5B327836D77",
+      "localizations" : [
+        {
+          "description" : "一次购买，永久解锁全部图鉴深度解读并移除广告。",
+          "displayName" : "终身会员",
+          "locale" : "zh-Hans"
+        },
+        {
+          "description" : "Unlock all expert notes forever and remove ads.",
+          "displayName" : "Lifetime Premium",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.knshouxiang.premium.lifetime",
+      "referenceName" : "Lifetime Premium"
+    }
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "2534838980",
+    "_developerTeamID" : "GQADQVN4BT",
+    "_lastSynchronizedDate" : 773720400.0,
+    "_storefront" : "CHN",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "C2E8FF5D",
+      "localizations" : [
+        {
+          "customAppName" : "手相图鉴",
+          "locale" : "zh-Hans"
+        },
+        {
+          "customAppName" : "Palm Atlas",
+          "locale" : "en_US"
+        }
+      ],
+      "name" : "Premium Subscription",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "¥12.00",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "E8A3456D-5D9D-4CB4-93F9-55D81167567A",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "按月解锁全部 270 张图鉴深度解读并移除广告。",
+              "displayName" : "月会员",
+              "locale" : "zh-Hans"
+            },
+            {
+              "description" : "Monthly access to all expert notes and ad-free reading.",
+              "displayName" : "Monthly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.knshouxiang.premium.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Premium",
+          "subscriptionGroupID" : "C2E8FF5D",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "¥88.00",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "29941B5F-E769-41C2-9906-D76D07CFE50B",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "按年解锁全部 270 张图鉴深度解读并移除广告。",
+              "displayName" : "年会员",
+              "locale" : "zh-Hans"
+            },
+            {
+              "description" : "Annual access to all expert notes and ad-free reading.",
+              "displayName" : "Yearly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.knshouxiang.premium.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Yearly Premium",
+          "subscriptionGroupID" : "C2E8FF5D",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

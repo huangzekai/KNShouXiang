@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        let mainTabBarVc = KNNavigationController(rootViewController: KNHomeViewController())
+        let mainTabBarVc = KNPalmRootTabController()
         
         self.window = UIWindow()
         self.window?.frame  = UIScreen.main.bounds
@@ -24,12 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setDefaultAppearance()
 
+        KNCommerceRuntime.start()
         Bugly.start(withAppId: "d19a08630c")
         KNMonitorManager.initMonitor()
 
         
         return true
     }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        guard let rootViewController = window?.rootViewController else {
+            return
+        }
+        KNCommerceRuntime.showAppOpenIfAllowed(from: rootViewController)
+    }
+
     func setDefaultAppearance() {
         let titleFont = UIFont.boldSystemFont(ofSize: 24) // 设置字体大小为 24
         let appearance = UINavigationBar.appearance()
@@ -37,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"手相图解";
+    self.title = @"手相图鉴";
     
     [self addRightbarButton];
     

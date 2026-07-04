@@ -29,6 +29,14 @@ THE SOFTWARE.
 Copyright (C) 2017 Tencent Bugly, Inc. All rights reserved.
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2026 Google LLC
+
+## GoogleUserMessagingPlatform
+
+Copyright 2025 Google LLC
+
 ## JKCategories
 
 The MIT License (MIT)

@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "palm_base_gpt.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

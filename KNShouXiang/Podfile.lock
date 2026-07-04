@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Bugly (2.5.93)
+  - Google-Mobile-Ads-SDK (13.6.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleUserMessagingPlatform (3.1.0)
   - JKCategories (1.9.3):
     - JKCategories/CoreData (= 1.9.3)
     - JKCategories/CoreLocation (= 1.9.3)
@@ -165,6 +168,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
   - Bugly
+  - Google-Mobile-Ads-SDK
   - JKCategories
   - JXPhotoBrowser (~> 3.0)
   - JXSegmentedView
@@ -177,6 +181,8 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - Bugly
+    - Google-Mobile-Ads-SDK
+    - GoogleUserMessagingPlatform
     - JKCategories
     - JXPhotoBrowser
     - JXSegmentedView
@@ -189,6 +195,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Bugly: b8715e6ec4004b7f7fbffab0643ba80545aee3da
+  Google-Mobile-Ads-SDK: 6e501ace4af8d63e967bd45497c8b2b05821163d
+  GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
   JKCategories: c995567f04ff98680313f56544e6cb62d3152733
   JXPhotoBrowser: d32e94e1226d43bf5ed83164e3f5b651fed625e0
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
@@ -198,6 +206,6 @@ SPEC CHECKSUMS:
   UMCommon: 47e0b53f6a36568e958a5abd005ed7577fcac9ad
   UMDevice: 9ef8045b59e0479cff7062915c879a1af46fa094
 
-PODFILE CHECKSUM: 6633e483ed1c7307a71bdbb7c379dbf9874eaac9
+PODFILE CHECKSUM: f6e1a0b692bd31d4709e93dc687ef9b48886fed3
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2
